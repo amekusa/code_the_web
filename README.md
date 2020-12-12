@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: default
+paginate: true
 ---
 
 # { CODE_THE_WEB }
@@ -173,3 +174,7 @@ HTML の文法は "**タグ**" で成り立っている。
 特定のタグにしかつけられない属性もある。
 
 `02_attributes.html` を見てみよう。
+
+---
+
+[#2 へつづく](README_2.html)

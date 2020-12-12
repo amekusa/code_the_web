@@ -1,6 +1,7 @@
 ---
 marp: true
 theme: default
+paginate: true
 ---
 
 # { CODE_THE_WEB #2 }
@@ -260,5 +261,4 @@ color: hsla(120, 100%, 40%, 0.5); /* 半透明の緑 */
 
 ---
 
-参考:
-https://www.w3schools.com/cssref/css_colors.asp
+[#3 へつづく](README_3.html)
