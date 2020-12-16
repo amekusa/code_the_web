@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* 基本のスタイル */
+body {
+    font-size: 16px;
+    line-height: 1.75; /* 二分四分アキ */
+}
+a {
+    text-decoration: none; /* アンダーラインを消す */
+}
+h1, h2, h3 {
+    line-height: 1.25; /* 見出しはアキを詰める */
+}
+q::before {
+    content: "“";
+}
+q::after {
+    content: "”";
+}
+
+
+/* ヘッダー
+/* .title を含むエリア */
+.header {
+    position: relative; /* 子要素の基準位置に指定 */
+    height: 200px; /* 高さ */
+
+    background-color: hsl(208, 13%, 28%);
+    color: white;
+}
+.header a {
+    color: inherit; /* 色を親から継承 */
+}
+
+/* サイトのタイトル */
+.title {
+    position: absolute; /* 絶対指定 */
+    left: 36px;         /* 左端からの位置 */
+    bottom: 32px;       /* 下端からの位置 */
+
+    font-size: 2em;
+    font-family: Rockwell, "Courier New", monospace;
+    font-weight: bold;
+}
+.title .bracket {
+    vertical-align: .1em; /* ちょっと上にずらす */
+    font-weight: normal;
+}
+
+
+/* 中央パート
+/* .main と .sidebar を含むエリア */
+.middle {
+    display: flex; /* カラムレイアウト（段組み） */
+}
+
+/* メインコンテンツ */
+.main {
+    max-width: 40em; /* 最大幅 */
+    padding: 32px 36px; /* 余白: 縦 横 */
+}
+
+/* サイドバー */
+.sidebar {
+    min-width: 320px;
+    background-color: hsl(207, 25%, 85%);
+}
+
+/* メニュー */
+.menu {
+    list-style: none; /* リストの点を消す */
+}
+
+
+/* フッター */
+.footer {
+    background-color: hsl(208, 13%, 28%);
+    color: white;
+}
+
+
+/* ヘッダー, 中央, フッターまとめて */
+.header,
+.middle,
+.footer {
+    min-width: 800px; /* 最小幅 */
+}
