@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>class属性の用例</title>
+    </head>
+    <body>
+        <style>
+            .colored {
+                color: deeppink;
+            }
+            .italic {
+                font-style: italic;
+            }
+
+            /* <h3> の colored クラスのみに適用 */
+            h3.colored {
+                color: dodgerblue;
+            }
+
+            /* カンマ区切りで複数のセレクタ */
+            h4, h5, h6 {
+                background-color: limegreen;
+                color: white;
+            }
+        </style>
+
+        <!-- 例1 -->
+        <p>
+            <strong class="colored">色は匂へど</strong>　散りぬるを<br>
+            我が世誰ぞ　常ならむ<br>
+            有為の奥山　今日越えて<br>
+            浅き夢見じ　酔ひもせず
+        </p>
+
+        <hr>
+
+        <!-- 例2 -->
+        <p class="italic">
+            The quick brown fox jumps over the lazy dog.
+        </p>
+
+        <hr>
+
+        <!-- 例3: スペースを挟んで複数のクラスを適用 -->
+        <h2 class="colored italic">
+            Do Not Repeat Yourself
+        </h2>
+
+        <hr>
+
+        <!-- 例4 -->
+        <p class="colored">
+            パラグラフ
+        </p>
+        <h3 class="colored">
+            見出し (H4)
+        </h3>
+
+        <hr>
+
+        <!-- 例5 -->
+        <h4>見出し (H4)</h4>
+        <h5>見出し (H5)</h5>
+        <h6>見出し (H6)</h6>
+
+    </body>
+</html>
