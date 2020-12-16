@@ -7,6 +7,7 @@ body {
 }
 a {
     text-decoration: none; /* アンダーラインを消す */
+    color: inherit; /* 文字色を親から継承 */
 }
 h1, h2, h3 {
     line-height: 1.25; /* 見出しはアキを詰める */
@@ -19,6 +20,7 @@ q::after {
 }
 
 
+
 /* ヘッダー
 /* .title を含むエリア */
 .header {
@@ -27,9 +29,6 @@ q::after {
 
     background-color: hsl(208, 13%, 28%);
     color: white;
-}
-.header a {
-    color: inherit; /* 色を親から継承 */
 }
 
 /* サイトのタイトル */
@@ -48,6 +47,7 @@ q::after {
 }
 
 
+
 /* 中央パート
 /* .main と .sidebar を含むエリア */
 .middle {
@@ -59,17 +59,37 @@ q::after {
     max-width: 40em; /* 最大幅 */
     padding: 32px 36px; /* 余白: 縦 横 */
 }
+.main a {
+    color: hotpink; /* リンクカラー */
+}
+
+
 
 /* サイドバー */
 .sidebar {
-    min-width: 320px;
+    min-width: 240px;
     background-color: hsl(207, 25%, 85%);
+    border-right: 32px solid rgba(255, 255, 255, .5); /* 右ボーダー */
 }
 
 /* メニュー */
 .menu {
-    list-style: none; /* リストの点を消す */
+    list-style: none; /* リストの点（バレット）を消す */
+
+    margin: 0;  /* 隙間なし */
+    padding: 0; /* 余白なし */
+
+    text-transform: uppercase; /* 全部大文字 */
+    font-family: Rockwell, "Courier New", monospace;
+    letter-spacing: .1em;
+    color:rgba(0, 0, 0, .5);
 }
+.menu li a {
+    display: block;
+    padding: 1em 2em;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
 
 
 /* フッター */
@@ -77,6 +97,7 @@ q::after {
     background-color: hsl(208, 13%, 28%);
     color: white;
 }
+
 
 
 /* ヘッダー, 中央, フッターまとめて */
