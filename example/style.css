@@ -4,6 +4,8 @@
 body {
     font-size: 16px;
     line-height: 1.75; /* 二分四分アキ */
+
+    margin: 0;
 }
 a {
     text-decoration: none; /* アンダーラインを消す */
@@ -82,20 +84,45 @@ q::after {
     text-transform: uppercase; /* 全部大文字 */
     font-family: Rockwell, "Courier New", monospace;
     letter-spacing: .1em;
-    color:rgba(0, 0, 0, .5);
+
+    color: hsl(208, 13%, 28%);
 }
 .menu li a {
     display: block;
     padding: 1em 2em;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
+    opacity: .5; /* 半透明 */
+    transition: all .5s; /* ゆっくり変化 */
+}
+.menu li a:hover { /* マウスホバー時 */
+    opacity: 1; /* 不透明化 */
+    background-color: rgba(255, 255, 255, .5);
 }
 
 
 
 /* フッター */
 .footer {
+    position: relative;
+    height: 200px;
+    padding: 32px 36px;
+
     background-color: hsl(208, 13%, 28%);
     color: white;
+}
+/* コピーライト表記 */
+.copyright {
+    position: absolute;
+    right: 36px;
+    bottom: 32px;
+    margin: 0;
+}
+.copyright .product {
+    font-family: Rockwell, "Courier New", monospace;
+}
+.copyright .copy {
+    font-size: 1.5em;
+    vertical-align: -.15em;
 }
 
 
