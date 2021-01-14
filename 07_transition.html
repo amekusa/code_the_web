@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>transition の用例</title>
+    </head>
+    <body>
+        <style>
+            /* 例1: ホバー時に文字色を変える */
+            .blossom {
+                font-weight: bold;
+                color: #66bb00;
+                transition: color 1s;
+            }
+            .blossom:hover {
+                color: #ff3399;
+            }
+
+            /* 例2: リンクのホバー時 */
+            a {
+                font-size: 24px;
+                color: #3366ff;
+                transition: color 1s, background-color .5s;
+            }
+            a:hover {
+                background-color: #3366ff;
+                color: white;
+            }
+
+            /* 例3: ボタンのクリック時 */
+            .button {
+                background-color: #33bb66;
+                color: white;
+                position: relative; /* 相対位置モード */
+                top: 0;             /* 初期位置 */
+                width: 8em;         /* ボタンの幅 */
+                padding: .5em 1em;  /* ボタンの中の余白 */
+                border-radius: 5px; /* 角丸 */
+                box-shadow: 0 5px 0 #217943; /* 影 5px */
+                transition: all .3s; /* 全プロパティをアニメーション（0.3秒）*/
+            }
+            .button:active {
+                top: 4px; /* 下に 4px 移動 */
+                box-shadow: 0 1px 0 0 #217943; /* 影を 1px に */
+            }
+        </style>
+
+        <!-- 例1 -->
+        <p>
+            <span class="blossom">さくら　さくら</span><br>
+            やよいの空は　見わたす限り<br>
+            かすみか雲か　匂いぞ出ずる<br>
+            いざやいざや　見にゆかん<br>
+        </p>
+
+        <hr>
+
+        <!-- 例2 -->
+        <p>
+            A <a>quick</a> brown fox jumps<br>
+            over the <a>lazy</a> dog
+        </p>
+
+        <hr>
+
+        <!-- 例3 -->
+        <div class="button">PRESS ME</div>
+
+    </body>
+</html>
