@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>擬似クラス :hover と :active の用例</title>
+    </head>
+    <body>
+        <style>
+            /* 例1: リンクのホバー時 */
+            a {
+                color: #3366ff;
+                font-size: 24px;
+            }
+            a:hover {
+                background-color: #3366ff;
+                color: white;
+            }
+
+            /* 例2: ボタンのクリック時 */
+            .button {
+                background-color: #33bb66;
+                color: white;
+                position: relative; /* 相対指定を有効化 */
+                width: 8em;         /* ボタンの幅 */
+                padding: .5em 1em;  /* ボタンの中の余白 */
+                border-radius: 5px; /* 角丸 */
+            }
+            .button:active {
+                top: 2px; /* 下に 2px ずらす */
+            }
+        </style>
+
+        <!-- 例1 -->
+        <p>
+            A <a>quick</a> brown fox jumps<br>
+            over the <a>lazy</a> dog
+        </p>
+
+        <hr>
+
+        <!-- 例2 -->
+        <div class="button">PRESS ME</div>
+
+    </body>
+</html>
