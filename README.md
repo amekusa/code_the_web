@@ -49,12 +49,11 @@ HTML とは
 ---
 
 ## "ほぼ" 全てのウェブサイトは HTML コードでできている
-Wixでつくったサイトも、
-[YouTube](https://www.youtube.com)も、
-[Apple](https://www.apple.com)のサイトも、
-[Google](https://www.google.com)の検索一覧も、
-5ちゃんねるも、
-[阿部寛のホームページ](http://abehiroshi.la.coocan.jp/)も。
+Wixでつくったサイトも
+[YouTube](https://www.youtube.com)も
+[Apple](https://www.apple.com)のサイトも
+[Google](https://www.google.com)の検索一覧も
+[阿部寛のホームページ](http://abehiroshi.la.coocan.jp/)も
 
 ---
 
@@ -62,15 +61,11 @@ Wixでつくったサイトも、
 一定のルール（言語, 文法）に従って書かれた**テキスト（文字情報）**。
 
 ゆえに **HTML コード**とは、
-**HTML という言語, 文法**に従って書かれたテキスト（文字情報）です。
+**HTML という言語, 文法**に従って書かれたテキスト（文字情報）。
 
 ---
 
-つまり、ウェブサイトはただのテキストでできていた… :scream:
-
----
-
-## さっそく書いてみたい、HTML
+## 書いてみよう HTML
 ただのテキストなので高いソフトなどは要りません。
 必要なのは**テキストエディタ**だけ。
 
@@ -98,7 +93,8 @@ Wixでつくったサイトも、
 ### 1. 講義のプロジェクトフォルダをダウンロード
 https://github.com/amekusa/code_the_web
 
-ダウンロードできたら、適当な場所に展開してください。
+ダウンロードできたら、適当な場所に展開し、
+フォルダ名を **`code_the_web`** に変更する。
 
 ### 2. VS Code でフォルダを開く
 
@@ -118,7 +114,7 @@ https://github.com/amekusa/code_the_web
 ## HTML の文法
 HTML の文法は "**タグ**" で成り立っている。
 
-こういうのがタグである。
+こういうのがタグ。
 - `<html>`
 - `<head>`
 - `<body>`
