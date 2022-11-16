@@ -1,2 +1,6 @@
 /WORKSPACE/*
 !/WORKSPACE/*.gitkeep
+
+!/WORKSPACE/img/
+/WORKSPACE/img/*
+!/WORKSPACE/img/sample.jpg
