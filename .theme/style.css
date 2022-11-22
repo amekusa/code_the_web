@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+:root {
+  font-size: 1.75em;
+  font-family: Helvetica, "Hiragino Kaku Gothic Pro", sans-serif;
+  line-height: 1.75;
+}
+
+/* LOGO */
+section[id='1'] h1 {
+  font-family: Rockwell, sans-serif;
+  font-size: 48px;
+  letter-spacing: .1em;
+}
+section[id='1'] h1::before {
+  content: "{ ";
+}
+section[id='1'] h1::after {
+  content: " }";
+}
+section[id='1'] h1::before,
+section[id='1'] h1::after {
+  font-size: .9em;
+  vertical-align: .15em;
+}
+
+h2,h3 {
+  font-family: "Avenir Next", sans-serif;
+  line-height: 1.25;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+strong {
+  background:linear-gradient(transparent 60%, #ff6 60%);
+}

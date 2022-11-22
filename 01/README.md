@@ -1,20 +1,48 @@
 ---
 marp: true
-theme: default
 paginate: true
+theme: default
+# style: @import "../.theme/style.css";
 ---
 
 <style>
-	em {
-		font-weight: bold;
-		font-style: normal;
-	}
-	strong {
-		background:linear-gradient(transparent 60%, #ff6 60%);
-	}
+h1.logo {
+  font-size: 64px;
+}
+.logo {
+  font-family: Futura, sans-serif;
+  font-weight: normal;
+  letter-spacing: .1em;
+}
+.logo b {
+  font-weight: bold;
+  letter-spacing: .3em;
+  text-shadow:
+    0 -.3em 0 #60f4,
+    0 -.75em 0 #0f66,
+    0 -1.4em 0 #ff08;
+}
+.logo::before {
+  content: "[";
+  padding-right: .5em;
+}
+.logo::after {
+  content: "]";
+  padding-left: .5em;
+  text-shadow:
+     .6em 0 0 #f098,
+    1.2em 0 0 #f206,
+    1.8em 0 0 #fb06;
+}
+.logo::before,
+.logo::after {
+  font-family: Helvetica;
+  font-size: .9em;
+  vertical-align: .13em;
+}
 </style>
 
-# { CODE_THE_WEB }
+<h1 class="logo"><b>CODE</b>_THE_WEB</h1>
 コードでウェブをつくろう
 
 ---
