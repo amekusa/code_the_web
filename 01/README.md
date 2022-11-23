@@ -2,48 +2,14 @@
 marp: true
 paginate: true
 theme: default
-# style: @import "../.theme/style.css";
+style: @import "../.theme/style.css";
 ---
 
-<style>
-h1.logo {
-  font-size: 64px;
-}
-.logo {
-  font-family: Futura, sans-serif;
-  font-weight: normal;
-  letter-spacing: .1em;
-}
-.logo b {
-  font-weight: bold;
-  letter-spacing: .3em;
-  text-shadow:
-    0 -.3em 0 #60f4,
-    0 -.75em 0 #0f66,
-    0 -1.4em 0 #ff08;
-}
-.logo::before {
-  content: "[";
-  padding-right: .5em;
-}
-.logo::after {
-  content: "]";
-  padding-left: .5em;
-  text-shadow:
-     .6em 0 0 #f098,
-    1.2em 0 0 #f206,
-    1.8em 0 0 #fb06;
-}
-.logo::before,
-.logo::after {
-  font-family: Helvetica;
-  font-size: .9em;
-  vertical-align: .13em;
-}
-</style>
-
-<h1 class="logo"><b>CODE</b>_THE_WEB</h1>
-コードでウェブをつくろう
+<div id="cover">
+  <h1 class="logo"><b>CODE</b>_THE_WEB</h1>
+  <p class="title">コードでウェブをつくろう</p>
+  <p class="author">&copy; 2022 Satoshi Soma</p>
+</div>
 
 ---
 
@@ -101,7 +67,7 @@ HTML とは
 
 ---
 
-# サイトを勝手に改変してみよう
+## サイトを勝手に改変してみよう
 1. [Wikipedia.org](https://www.wikipedia.org/) のトップページにあるロゴを右クリック
 2. 「*要素を検証*」（または「*Inspect*」）
 3. *青くハイライトされた部分*を右クリック
