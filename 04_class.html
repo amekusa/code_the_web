@@ -4,64 +4,98 @@
   <title>class属性の用例</title>
 </head>
 <body>
+
+  <!-- 例1 -->
   <style>
-    .colored {
-      color: deeppink;
+    .s {
+      font-size: 12px;
     }
-    .italic {
-      font-style: italic;
+    .m {
+      font-size: 16px;
     }
-
-    /* <h3> の colored クラスのみに適用 */
-    h3.colored {
-      color: dodgerblue;
+    .l {
+      font-size: 24px;
     }
-
-    /* カンマ区切りで複数のセレクタ */
-    h4, h5, h6 {
-      background-color: limegreen;
-      color: white;
+    .xl {
+      font-size: 36px;
     }
   </style>
 
-  <!-- 例1 -->
-  <p>
-    <strong class="colored">色は匂へど</strong>　散りぬるを<br>
-    我が世誰ぞ　常ならむ<br>
-    有為の奥山　今日越えて<br>
-    浅き夢見じ　酔ひもせず
-  </p>
+  <p class="s">S サイズ</p>
+  <p class="m">M サイズ</p>
+  <p class="l">L サイズ</p>
+  <p class="xl">XL サイズ</p>
 
   <hr>
 
   <!-- 例2 -->
-  <p class="italic">
-    The quick brown fox jumps over the lazy dog.
+  <style>
+    .season { /* 全季節共通 */
+      color: white;     /* 文字色 */
+      padding-left: 30px; /* 背景左に余白 */
+    }
+    .spring { /* 春 */
+      background-color: pink; /* 背景色 */
+    }
+    .summer { /* 夏 */
+      background-color: yellowgreen; /* 背景色 */
+      margin-left: 30px;               /* 左にスキマ */
+    }
+    .autumn { /* 秋 */
+      background-color: brown; /* 背景色 */
+      margin-left: 60px;         /* 左にスキマ */
+    }
+    .winter { /* 冬 */
+      background-color: lightskyblue; /* 背景色 */
+      margin-left: 90px;                /* 左にスキマ */
+    }
+  </style>
+
+  <h1>四季</h1>
+  <!-- スペース区切りで複数のクラス名 -->
+  <h2 class="season spring">春 Spring</h2>
+  <h2 class="season summer">夏 Summer</h2>
+  <h2 class="season autumn">秋 Autumn</h2>
+  <h2 class="season winter">冬 Winter</h2>
+
+  <hr>
+
+  <!-- 問題 -->
+  <!--
+    以下の曲について、
+    1) 題名にクラス名 "title" を適用しなさい。
+    2) 作詞, 作曲を含む段落にクラス名 "author" を適用しなさい。
+    3) 歌詞（4段落）全てにクラス名 "lyric" を適用しなさい。
+    4) 歌詞（4段落）それぞれ順番に、クラス名 "verse1" "verse2" "verse3" "verse4" を適用しなさい。
+    5) スタイルシートを使って、自由にデザインしてみましょう。
+  -->
+
+  <h1>この道</h1>
+  <p>
+    <small>作詞</small> 北原白秋<br>
+    <small>作曲</small> 山田耕筰
+  </p>
+  <p>
+    この道は　いつか来た道<br>
+    ああ　そうだよ<br>
+    あかしやの花が咲いてる
+  </p>
+  <p>
+    あの丘は　いつか見た丘<br>
+    ああ　そうだよ<br>
+    ほら　白い時計台だよ
+  </p>
+  <p>
+    この道は　いつか来た道<br>
+    ああ　そうだよ<br>
+    お母さまと馬車で行ったよ
+  </p>
+  <p>
+    あの雲は　いつか見た雲<br>
+    ああ　そうだよ<br>
+    山査子（さんざし）の枝も垂れてる
   </p>
 
-  <hr>
-
-  <!-- 例3: スペースを挟んで複数のクラスを適用 -->
-  <h2 class="colored italic">
-    Do Not Repeat Yourself
-  </h2>
-
-  <hr>
-
-  <!-- 例4 -->
-  <p class="colored">
-    パラグラフ
-  </p>
-  <h3 class="colored">
-    見出し (H3)
-  </h3>
-
-  <hr>
-
-  <!-- 例5 -->
-  <h4>見出し (H4)</h4>
-  <h5>見出し (H5)</h5>
-  <h6>見出し (H6)</h6>
 
 </body>
 </html>
