@@ -1,92 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>DIV と SPAN の用例</title>
-    </head>
-    <body>
-        <style>
-            /* いろは歌のスタイル */
-            .iroha {
-                background-color: antiquewhite;
-                padding: 1em; /* 周囲の余白 */
+<head>
+  <title>DIV と SPAN の用例</title>
+</head>
+<body>
+  <style>
+    /* いろは歌のスタイル */
+    .iroha {
+      background-color: antiquewhite;
+      padding: 1em; /* 周囲の余白 */
 
-                font-family: YuMincho, serif;
-                font-weight: bold;
-                font-size: 32px;
-            }
+      font-family: YuMincho, serif;
+      font-weight: bold;
+      font-size: 32px;
+    }
 
-            /* いろは歌の見出し
-            /* セレクタにスペースを挟むことで、
-            /* 特定の要素の、さらに下位の要素を指定できる */
-            .iroha h3 {
-                font-size: 48px;
-                border-bottom: 2px solid black; /* 下線 */
-            }
+    /* いろは歌の見出し
+    /* セレクタにスペースを挟むことで、
+    /* 特定の要素の、さらに下位の要素を指定できる */
+    .iroha h3 {
+      font-size: 48px;
+      border-bottom: 2px solid black; /* 下線 */
+    }
 
-            /* 例2: ふりがなの部分 */
-            .iroha .kana {
-                font-size: 32px;
-                color: darkred;
-            }
+    /* 例2: ふりがなの部分 */
+    .iroha .kana {
+      font-size: 32px;
+      color: darkred;
+    }
 
-            /* 例3: 概要の部分 */
-            .iroha .summary {
-                background-color: rgba(255, 255, 255, .75);
-                padding: .25em 1em; /* 周囲の余白（縦 横） */
-                border-radius: .5em; /* 角を丸く */
+    /* 例3: 概要の部分 */
+    .iroha .summary {
+      background-color: rgba(255, 255, 255, .75);
+      padding: .25em 1em; /* 周囲の余白（縦 横） */
+      border-radius: .5em; /* 角を丸く */
 
-                font-size: 21px;
-                font-weight: normal;
-            }
-        </style>
+      font-size: 21px;
+      font-weight: normal;
+    }
+  </style>
 
-        <!-- 例1: DIV によるグルーピング -->
-        <div class="iroha">
-            1.
-            <h3>いろは歌（いろはうた）</h3>
-            <p>
-                色は匂へど　散りぬるを<br>
-                我が世誰ぞ　常ならむ<br>
-                有為の奥山　今日越えて<br>
-                浅き夢見じ　酔ひもせず
-            </p>
-        </div>
+  <!-- 例1: DIV によるグルーピング -->
+  <div class="iroha">
+    1.
+    <h3>いろは歌（いろはうた）</h3>
+    <p>
+      色は匂へど　散りぬるを<br>
+      我が世誰ぞ　常ならむ<br>
+      有為の奥山　今日越えて<br>
+      浅き夢見じ　酔ひもせず
+    </p>
+  </div>
 
-        <hr>
+  <hr>
 
-        <!-- 例2: SPAN による囲い込み -->
-        <div class="iroha">
-            2.
-            <h3>
-                いろは歌<span class="kana">（いろはうた）</span>
-            </h3>
-            <p>
-                色は匂へど　散りぬるを<br>
-                我が世誰ぞ　常ならむ<br>
-                有為の奥山　今日越えて<br>
-                浅き夢見じ　酔ひもせず
-            </p>
-        </div>
+  <!-- 例2: SPAN による囲い込み -->
+  <div class="iroha">
+    2.
+    <h3>
+      いろは歌<span class="kana">（いろはうた）</span>
+    </h3>
+    <p>
+      色は匂へど　散りぬるを<br>
+      我が世誰ぞ　常ならむ<br>
+      有為の奥山　今日越えて<br>
+      浅き夢見じ　酔ひもせず
+    </p>
+  </div>
 
-        <hr>
+  <hr>
 
-        <!-- 例3: DIV の入れ子 -->
-        <div class="iroha">
-            3.
-            <h3>
-                いろは歌<span class="kana">（いろはうた）</span>
-            </h3>
-            <div class="summary">
-                <p>いろは歌（いろはうた）とは、仮名を重複させずに使って作られた47字の誦文（ずもん）のこと。</p>
-                <p>七五調の韻文となっており、のちに手習いの手本として広く受容され、近代にいたるまで用いられた。</p>
-            </div>
-            <p>
-                色は匂へど　散りぬるを<br>
-                我が世誰ぞ　常ならむ<br>
-                有為の奥山　今日越えて<br>
-                浅き夢見じ　酔ひもせず
-            </p>
-        </div>
+  <!-- 例3: DIV の入れ子 -->
+  <div class="iroha">
+    3.
+    <h3>
+      いろは歌<span class="kana">（いろはうた）</span>
+    </h3>
+    <div class="summary">
+      <p>いろは歌（いろはうた）とは、仮名を重複させずに使って作られた47字の誦文（ずもん）のこと。</p>
+      <p>七五調の韻文となっており、のちに手習いの手本として広く受容され、近代にいたるまで用いられた。</p>
+    </div>
+    <p>
+      色は匂へど　散りぬるを<br>
+      我が世誰ぞ　常ならむ<br>
+      有為の奥山　今日越えて<br>
+      浅き夢見じ　酔ひもせず
+    </p>
+  </div>
 
-    </body>
+</body>
 </html>
