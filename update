@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/Desktop/code_the_web_2022x
+git pull
+
