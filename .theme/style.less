@@ -5,67 +5,42 @@
 /* marp base styles */
 @import-theme "default";
 
-@fs-s: 15pt;
-@fs-m: 18pt;
-@fs-l: 24pt;
-@fs-xl: 27pt;
-@fs-max: 48pt;
+@fsS: 18pt;
+@fsM: 21pt;
+@fsL: 24pt;
+@fsXL: 27pt;
+@fsMax: 48pt;
 
-@c-black: #223;
+@ffFutura: Futura, "Century Gothic", sans-serif;
+@ffCode: Menlo, Monaco, "Courier New", monospace;
+
+@cBlack: #334;
+@cDkBlue: #224466;
 
 :root {
-  font-size: @fs-m;
+  font-size: @fsM;
   font-family: Helvetica, Arial, "Hiragino Kaku Gothic Pro", sans-serif;
   line-height: 1.75;
-}
-h1,h2,h3 {
-  line-height: 1.25;
-}
-h2 {
-  font-size: @fs-xl;
-  color: var(--h1-color);
-}
-h3 {
-  font-size: @fs-l;
-}
-small {
-  font-size: @fs-s;
-}
-em {
-  font-weight: bold;
-  font-style: normal;
-}
-strong {
-  background:linear-gradient(transparent 60%, #0f66 60%);
-  
-  code {
-    color: #0f6;
-  }
-}
-kbd {
-  background-color: @c-black;
-  color: white;
-  font-size: @fs-m;
-  line-height: 1;
-  padding: .1em .3em;
-  border: .1em solid lighten(@c-black, 50%);
-  border-radius: .3em;
-}
+  color: @cBlack;
 
-#cover {
-  .logo {
-    font-size: @fs-max;
-  }
-  .author {
-    text-align: right;
-    color: #0066;
-    font-weight: bold;
-    font-family: Optima;
+  &.cover {
+    .logo {
+      font-size: @fsMax;
+    }
+    .title {
+      font-weight: bold;
+      font-size: @fsL;
+      color: @cDkBlue;
+    }
+    .author {
+      text-align: right;
+      color: #0066;
+    }
   }
 }
 
 .logo {
-  font-family: Futura, sans-serif;
+  font-family: @ffFutura;
   font-weight: normal !important;
   letter-spacing: .1em;
   padding: 0;
@@ -100,6 +75,53 @@ kbd {
   }
 }
 
+h1,h2,h3 {
+  line-height: 1.25;
+}
+h1,h2 {
+  color: @cDkBlue;
+}
+h2 {
+  font-size: @fsXL;
+}
+h3 {
+  font-size: @fsL;
+}
+h4,h5,h6 {
+  font-size: @fsM;
+}
+
+small {
+  font-size: @fsS;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+
+  code {
+    color: #0f6;
+    font-weight: normal;
+  }
+}
+strong {
+  background:linear-gradient(transparent 60%, #0f66 60%);
+  
+  code {
+    color: #0f6;
+  }
+}
+
+kbd {
+  background-color: @cBlack;
+  color: white;
+  font-size: @fsM;
+  line-height: 1;
+  padding: .1em .3em;
+  border: .1em solid lighten(@cBlack, 50%);
+  border-radius: .3em;
+}
+
 /* highlight.js theme */
 @import (less) "vs2015.css";
 
@@ -110,6 +132,6 @@ kbd {
 }
 
 code {
-  font-family: Menlo, Monaco, 'Courier New', monospace;
+  font-family: @ffCode;
   .hljs;
 }

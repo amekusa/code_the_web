@@ -3,55 +3,25 @@
 /* marp base styles */
 @import-theme "default";
 :root {
-  font-size: 18pt;
+  font-size: 21pt;
   font-family: Helvetica, Arial, "Hiragino Kaku Gothic Pro", sans-serif;
   line-height: 1.75;
+  color: #334;
 }
-h1,
-h2,
-h3 {
-  line-height: 1.25;
-}
-h2 {
-  font-size: 27pt;
-  color: var(--h1-color);
-}
-h3 {
-  font-size: 24pt;
-}
-small {
-  font-size: 15pt;
-}
-em {
-  font-weight: bold;
-  font-style: normal;
-}
-strong {
-  background: linear-gradient(transparent 60%, #0f66 60%);
-}
-strong code {
-  color: #0f6;
-}
-kbd {
-  background-color: #223;
-  color: white;
-  font-size: 18pt;
-  line-height: 1;
-  padding: 0.1em 0.3em;
-  border: 0.1em solid #9999bb;
-  border-radius: 0.3em;
-}
-#cover .logo {
+:root.cover .logo {
   font-size: 48pt;
 }
-#cover .author {
+:root.cover .title {
+  font-weight: bold;
+  font-size: 24pt;
+  color: #224466;
+}
+:root.cover .author {
   text-align: right;
   color: #0066;
-  font-weight: bold;
-  font-family: Optima;
 }
 .logo {
-  font-family: Futura, sans-serif;
+  font-family: Futura, "Century Gothic", sans-serif;
   font-weight: normal !important;
   letter-spacing: 0.1em;
   padding: 0;
@@ -76,6 +46,52 @@ kbd {
   font-weight: bold;
   letter-spacing: 0.3em;
   text-shadow: 0 -0.3em 0 #60f4, 0 -0.75em 0 #0f66, 0 -1.4em 0 #ff08;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+h1,
+h2 {
+  color: #224466;
+}
+h2 {
+  font-size: 27pt;
+}
+h3 {
+  font-size: 24pt;
+}
+h4,
+h5,
+h6 {
+  font-size: 21pt;
+}
+small {
+  font-size: 18pt;
+}
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+em code {
+  color: #0f6;
+  font-weight: normal;
+}
+strong {
+  background: linear-gradient(transparent 60%, #0f66 60%);
+}
+strong code {
+  color: #0f6;
+}
+kbd {
+  background-color: #334;
+  color: white;
+  font-size: 21pt;
+  line-height: 1;
+  padding: 0.1em 0.3em;
+  border: 0.1em solid #b1b1c5;
+  border-radius: 0.3em;
 }
 /* highlight.js theme */
 pre code.hljs {
@@ -178,7 +194,7 @@ code.hljs {
   line-height: 1.5;
 }
 code {
-  font-family: Menlo, Monaco, 'Courier New', monospace;
+  font-family: Menlo, Monaco, "Courier New", monospace;
   background: #1e1e1e;
   color: #dcdcdc;
 }
