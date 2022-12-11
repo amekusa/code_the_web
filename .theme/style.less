@@ -1,25 +1,60 @@
 @charset "utf-8";
 
+/* @theme custom */
+
+/* marp base styles */
+@import-theme "default";
+
+@fs-s: 15pt;
+@fs-m: 18pt;
+@fs-l: 24pt;
+@fs-xl: 27pt;
+@fs-max: 48pt;
+
+@c-black: #223;
+
 :root {
-  font-size: 1.75em;
-  font-family: Helvetica, "Hiragino Kaku Gothic Pro", sans-serif;
+  font-size: @fs-m;
+  font-family: Helvetica, Arial, "Hiragino Kaku Gothic Pro", sans-serif;
   line-height: 1.75;
 }
-h2,h3 {
-  font-family: "Avenir Next", sans-serif;
+h1,h2,h3 {
   line-height: 1.25;
+}
+h2 {
+  font-size: @fs-xl;
+  color: var(--h1-color);
+}
+h3 {
+  font-size: @fs-l;
+}
+small {
+  font-size: @fs-s;
 }
 em {
   font-weight: bold;
   font-style: normal;
 }
 strong {
-  background:linear-gradient(transparent 60%, #ff6 60%);
+  background:linear-gradient(transparent 60%, #0f66 60%);
+  
+  code {
+    color: #0f6;
+  }
+}
+kbd {
+  background-color: @c-black;
+  color: white;
+  font-size: @fs-m;
+  line-height: 1;
+  padding: .1em .3em;
+  border: .1em solid lighten(@c-black, 50%);
+  border-radius: .3em;
 }
 
 #cover {
   .logo {
-    font-size: 64px;
+    font-size: @fs-max;
   }
   .author {
     text-align: right;
@@ -63,4 +98,18 @@ strong {
       0 -.75em 0 #0f66,
       0 -1.4em 0 #ff08;
   }
+}
+
+/* highlight.js theme */
+@import (less) "vs2015.css";
+
+:is(pre, marp-pre) {
+  .hljs;
+  border: none;
+  line-height: 1.5;
+}
+
+code {
+  font-family: Menlo, Monaco, 'Courier New', monospace;
+  .hljs;
 }
