@@ -14,7 +14,7 @@
 :root.cover .title {
   font-weight: bold;
   font-size: 24pt;
-  color: #224466;
+  color: #246;
 }
 :root.cover .author {
   text-align: right;
@@ -54,7 +54,7 @@ h3 {
 }
 h1,
 h2 {
-  color: #224466;
+  color: #246;
 }
 h2 {
   font-size: 27pt;
@@ -75,18 +75,24 @@ em {
   font-style: normal;
 }
 em code {
-  color: #0f6;
+  color: #4f9;
   font-weight: normal;
 }
 strong {
   background: linear-gradient(transparent 60%, #0f66 60%);
 }
 strong code {
-  color: #0f6;
+  color: #4f9;
+}
+ol li::marker {
+  color: rgba(34, 68, 102, 0.6);
+  font-family: 'Courier New', Courier, monospace;
+  padding-right: 0.5em;
 }
 kbd {
   background-color: #334;
   color: white;
+  font-family: Menlo, Monaco, "Courier New", monospace;
   font-size: 21pt;
   line-height: 1;
   padding: 0.1em 0.3em;
@@ -194,7 +200,7 @@ code.hljs {
   line-height: 1.5;
 }
 code {
-  font-family: Menlo, Monaco, "Courier New", monospace;
   background: #1e1e1e;
   color: #dcdcdc;
+  font-family: Menlo, Monaco, "Courier New", monospace;
 }

@@ -15,7 +15,7 @@
 @ffCode: Menlo, Monaco, "Courier New", monospace;
 
 @cBlack: #334;
-@cDkBlue: #224466;
+@cDkBlue: #246;
 
 :root {
   font-size: @fsM;
@@ -100,7 +100,7 @@ em {
   font-style: normal;
 
   code {
-    color: #0f6;
+    color: #4f9;
     font-weight: normal;
   }
 }
@@ -108,13 +108,28 @@ strong {
   background:linear-gradient(transparent 60%, #0f66 60%);
   
   code {
-    color: #0f6;
+    color: #4f9;
+  }
+}
+
+ol {
+  li {
+    &::marker {
+      // color: lighten(@cDkBlue, 40%);
+      color: fadeout(@cDkBlue, 40%);
+      // font-style: italic;
+      // font-family: 'Times New Roman', Times, serif;
+      font-family: 'Courier New', Courier, monospace;
+      // font-weight: bold;
+      padding-right: .5em;
+    }
   }
 }
 
 kbd {
   background-color: @cBlack;
   color: white;
+  font-family: @ffCode;
   font-size: @fsM;
   line-height: 1;
   padding: .1em .3em;
@@ -132,6 +147,6 @@ kbd {
 }
 
 code {
-  font-family: @ffCode;
   .hljs;
+  font-family: @ffCode;
 }
