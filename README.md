@@ -1,0 +1,1 @@
+CODE_THE_WEB &copy; 2022 Satoshi Soma All Rights Reserved.
