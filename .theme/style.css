@@ -47,6 +47,15 @@
   letter-spacing: 0.3em;
   text-shadow: 0 -0.3em 0 #60f4, 0 -0.75em 0 #0f66, 0 -1.4em 0 #ff08;
 }
+.red {
+  color: #b44;
+}
+.green {
+  color: #4b4;
+}
+.blue {
+  color: #44b;
+}
 h1,
 h2,
 h3 {
@@ -85,8 +94,9 @@ strong code {
   color: #4f9;
 }
 ol li::marker {
-  color: rgba(34, 68, 102, 0.6);
+  color: #aac;
   font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
   padding-right: 0.5em;
 }
 kbd {
@@ -98,6 +108,23 @@ kbd {
   padding: 0.1em 0.3em;
   border: 0.1em solid #b1b1c5;
   border-radius: 0.3em;
+}
+table td,
+table th {
+  border: 1.5pt solid #aac;
+}
+table thead td,
+table thead th {
+  white-space: nowrap;
+}
+table.numtable {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+table.numtable td {
+  text-align: right;
+}
+img {
+  background-color: transparent;
 }
 /* highlight.js theme */
 pre code.hljs {

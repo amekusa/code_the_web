@@ -15,7 +15,10 @@
 @ffCode: Menlo, Monaco, "Courier New", monospace;
 
 @cBlack: #334;
+@cGrey: #aac;
 @cDkBlue: #246;
+
+@hl: 1.5pt; // hairline
 
 :root {
   font-size: @fsM;
@@ -75,6 +78,16 @@
   }
 }
 
+.red {
+  color: #b44;
+}
+.green {
+  color: #4b4;
+}
+.blue {
+  color: #44b;
+}
+
 h1,h2,h3 {
   line-height: 1.25;
 }
@@ -115,12 +128,9 @@ strong {
 ol {
   li {
     &::marker {
-      // color: lighten(@cDkBlue, 40%);
-      color: fadeout(@cDkBlue, 40%);
-      // font-style: italic;
-      // font-family: 'Times New Roman', Times, serif;
+      color: @cGrey;
       font-family: 'Courier New', Courier, monospace;
-      // font-weight: bold;
+      font-weight: bold;
       padding-right: .5em;
     }
   }
@@ -135,6 +145,28 @@ kbd {
   padding: .1em .3em;
   border: .1em solid lighten(@cBlack, 50%);
   border-radius: .3em;
+}
+
+table {
+  td, th {
+    border: @hl solid @cGrey;
+  }
+  thead {
+    td, th {
+      white-space: nowrap;
+    }
+  }
+  &.numtable {
+    font-family: @ffCode;
+  
+    td {
+      text-align: right;
+    }
+  }  
+}
+
+img {
+  background-color: transparent;
 }
 
 /* highlight.js theme */
