@@ -19,6 +19,7 @@
 @cDkBlue: #246;
 
 @hl: 1.5pt; // hairline
+@gap: 1.5em;
 
 :root {
   font-size: @fsM;
@@ -86,6 +87,21 @@
 }
 .blue {
   color: #44b;
+}
+
+.fl {
+  display: block;
+  margin: 0;
+  margin-bottom: @gap * .5;
+
+  &.l {
+    float: left;
+    margin-right: @gap;
+  }
+  &.r {
+    float: right;
+    margin-left: @gap;
+  }
 }
 
 h1,h2,h3 {

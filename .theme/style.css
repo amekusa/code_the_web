@@ -56,6 +56,19 @@
 .blue {
   color: #44b;
 }
+.fl {
+  display: block;
+  margin: 0;
+  margin-bottom: 0.75em;
+}
+.fl.l {
+  float: left;
+  margin-right: 1.5em;
+}
+.fl.r {
+  float: right;
+  margin-left: 1.5em;
+}
 h1,
 h2,
 h3 {
