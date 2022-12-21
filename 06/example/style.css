@@ -1,0 +1,76 @@
+@charset "utf-8";
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  background-color: rgba(0, 0, 0, 0.893);
+}
+.wrap {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ヘッダー */
+.header {
+  min-width: 320px;
+  padding: 30px 40px;
+  background-color: rgb(0, 159, 181);
+  color: white;
+}
+/* タイトル */
+.title {
+  font-family: Futura, "Century Gothic", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: .1em;
+}
+/* メイン */
+.main {
+  padding: 60px 40px;
+  background-color: white;
+}
+/* 見出し */
+.main h1 {
+  font-size: 64px;
+  text-align: right;
+  color: rgba(0, 0, 0, .4);
+  border-bottom: 4px dotted rgba(0, 0, 0, .2);
+}
+/* ギャラリー */
+.gallery {
+  display: grid; /* グリッドレイアウト */
+  gap: 1em;      /* 隙間 */
+  grid-template-columns: 1fr 1fr 1fr; /* 3列 */
+}
+/* サムネイル */
+.thumbnail {
+  display: block;
+}
+.thumbnail img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+/* フルサイズ写真 */
+.photo img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+.photo .date {
+  text-align: right;
+}
+/* フッター */
+.footer {
+  padding: 30px 40px;
+  color: white;
+}
+.profile .pic {
+  width: 64px;
+}
+/* コピーライト */
+.copyright {
+  text-align: center;
+  opacity: .4;
+}
