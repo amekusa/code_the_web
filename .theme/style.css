@@ -103,8 +103,8 @@ em {
   font-style: normal;
 }
 em code {
-  color: #4f9;
-  font-weight: normal;
+  /* color: #4f9; */
+  font-weight: bold;
 }
 strong {
   background: linear-gradient(transparent 60%, #0f66 60%);
@@ -246,7 +246,7 @@ code.hljs {
   line-height: 1.5;
 }
 code {
-  background: #1e1e1e;
-  color: #dcdcdc;
+  /* background: #1e1e1e;
+  color: #dcdcdc; */
   font-family: Menlo, Monaco, "Courier New", monospace;
 }
