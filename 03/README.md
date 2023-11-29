@@ -8,7 +8,7 @@ style: @import "../.theme/style.css";
 <div id="cover">
   <h1 class="logo"><b>CODE</b>_THE_WEB #3</h1>
   <p class="title">コードでウェブをつくろう #3</p>
-  <p class="author">&copy; 2022 Satoshi Soma</p>
+  <p class="author">&copy; 2023 Satoshi Soma</p>
 </div>
 
 ---
@@ -19,7 +19,7 @@ style: @import "../.theme/style.css";
 - そのタグの **見た目（スタイル）** を自由に変更できる
 - 書き方:
 ```html
-<tag style="プロパティ: 値">テキスト</tag>
+<タグ名 style="プロパティ: 値">テキスト</タグ名>
 ```
 - プロパティは “**どこ**を変えるか”
 - 値は “**どう**変えるか”
