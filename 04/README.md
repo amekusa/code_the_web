@@ -8,7 +8,7 @@ style: @import "../.theme/style.css";
 <div id="cover">
   <h1 class="logo"><b>CODE</b>_THE_WEB #4</h1>
   <p class="title">コードでウェブをつくろう #4</p>
-  <p class="author">&copy; 2022 Satoshi Soma</p>
+  <p class="author">&copy; 2023 Satoshi Soma</p>
 </div>
 
 ---
@@ -57,7 +57,7 @@ style: @import "../.theme/style.css";
 
 ## 前回のおさらい 3/6
 CSS において、*`{` の直前*の部分は「**セレクタ**」と呼び、
-`{ }` 内のスタイルの**適用範囲**を指定している。
+`{ }` 内に書いたスタイルの**適用範囲**を指定している。
 
 セレクタには*様々な書き方*が存在する。
 
@@ -122,7 +122,10 @@ h1, h2, h3 { （省略） }  /* カンマ区切りでまとめて指定 */
 
 ---
 
-## 実践！スタイルシート
+# 実践 CSS
+
+---
+
 前回、ウェブページを「*ヘッダー*」「*メイン*」「*フッター*」
 という三つのパーツに分け、HTML コーディングを行なった。
 
@@ -135,7 +138,7 @@ h1, h2, h3 { （省略） }  /* カンマ区切りでまとめて指定 */
 
 ---
 
-まずは *`<style>` タグ*を記述しよう。
+まずは *`<style>` タグ*を記述する。
 `<style>` タグの場所は基本的に*どこでもいい*のだが、
 わかりやすいように*ヘッダーのすぐ上*に書いておこう。
 
@@ -154,7 +157,7 @@ h1, h2, h3 { （省略） }  /* カンマ区切りでまとめて指定 */
 
 ---
 
-### 基本スタイルの設定
+## 基本スタイルの設定
 最初に、*ページ全体で共通*する基本の文字設定を行う。
 この設定は *`<body>` タグ*に対して適応するのがいいだろう。
 
@@ -174,7 +177,7 @@ CSS には「**親要素に設定されたスタイルは子要素に引き継�
 
 ---
 
-*`font-family` プロパティ*は、カンマ区切りで複数のフォント名を指定できる。
+*`font-family` プロパティ*は、`,` 区切りで複数のフォント名を指定できる。
 
 ```css
 font-family: Helvetica, Arial, sans-serif;
@@ -188,6 +191,7 @@ font-family: Helvetica, Arial, sans-serif;
 `sans-serif` はフォント名ではなく、
 「サンセリフ体」という*カテゴリ*での指定を意味するキーワードだ。
 実際にどのフォントが選択されるかは*閲覧者の環境依存*となる。
+そのため、*最後（一番右）* に指定するのが望ましいといえる。
 
 ---
 
@@ -205,7 +209,7 @@ line-height: 1.75;
 
 ---
 
-### ヘッダーのスタイル
+## ヘッダーのスタイル
 ヘッダーはサイトのアイデンティティを担う要素でもあるので、
 デザインにはある程度こだわりたい所だ。
 *閲覧者に強い印象を残せれば、二度目も訪れてくれる可能性が上がる。*
@@ -234,8 +238,8 @@ line-height: 1.75;
 ---
 
 ヘッダーに**背景色**をつけてみるのもいいだろう。
-多少ドギツイ色でも、ヘッダーだけならサイト全体の見やすさには影響が少ないし、
-サイトの**テーマカラー**としても機能する。
+多少大胆な色づかいでも、ヘッダーだけならサイト全体の見やすさには影響が少ないし、
+サイトの**テーマカラー**としても機能させることができる。
 
 ```css
 .header {
@@ -283,7 +287,7 @@ body {
 
   font-size: 32px;
   font-weight: bold; /* 太字 */
-  letter-spacing: .1em; /* 文字間隔 */
+  letter-spacing: 0.1em; /* 文字間隔 */
 }
 ```
 
@@ -297,7 +301,7 @@ body {
 
 ---
 
-### メインのスタイル
+## メインのスタイル
 メインのエリアにも、ヘッダー同様に適切な余白を設定しよう。
 ページの主要コンテンツを表示するエリアなので、
 上のヘッダーと下のフッターに対して、*やや広めの余白*を取ることをお勧めする。
@@ -317,23 +321,24 @@ body {
 
 ```css
 .main h1 {
-  font-size: 64px;          /* デカ文字 */
-  text-align: right;        /* 文字右寄せ */
-  color: rgba(0, 0, 0, .4); /* 文字色（半透明） */
+  font-size: 64px;           /* デカ文字 */
+  text-align: right;         /* 文字右寄せ */
+  color: rgba(0, 0, 0, 0.4); /* 文字色（半透明） */
 
   /* 境界線（下）*/
-  border-bottom: 4px solid rgba(0, 0, 0, .2);
-  /*             太さ  スタイル  色           */
+  border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+    /* 太さ:4px    スタイル: solid（直線）    色: 半透明の黒 */
 }
 ```
 
 この例では、フォントサイズを思い切って巨大にしてみた。
 ただ、文字色が黒のままだと主張が激しすぎるので、透明度をつけた。
+ついでに `border-bottom` で下線を付けて強調してみた。
 
 ---
 
-### フッターのスタイル
-フッターにも、ヘッダー同様 `padding` で余白を取る。
+## フッターのスタイル
+フッターにも、ヘッダー同様 `padding` で余白を取ろう。
 
 ついでに、ヘッダーとは別の背景色を割り当て、
 ページ全体で*トライカラー*の構成にしてみようと思う。
@@ -356,8 +361,8 @@ body {
 
 ---
 
-### 問題解決
-この場合、`body` に「背景色2」を適用することでページ全体を塗り、
+### 解決
+この場合、`body` に **フッターと同じ背景色** を適用することでページ全体を塗り、
 「メイン」の背景色には `white` を適用することで問題を解決できる。
 
 ```css
@@ -384,14 +389,14 @@ body {
 例: `<p>` を `inline` 要素に変更（元は `block` 要素）
 ```css
 p {
-    display: inline;
+  display: inline;
 }
 ```
 
 例: `<a>` を `block` 要素に変更（元は `inline` 要素）
 ```css
 a {
-    display: block;
+  display: block;
 }
 ```
 
@@ -408,8 +413,8 @@ a {
 
 ```css
 div {
-    width: 240px; /* 幅: 240px */
-    height: 4em;  /* 高: 4文字分 */
+  width: 240px; /* 幅: 240px */
+  height: 4em;  /* 高: 4文字分 */
 }
 ```
 
@@ -423,12 +428,12 @@ div {
 
 ```css
 div {
-    padding: 1em;        /* 周囲に一文字分の余白 */
-    padding: 1em 2em;    /* 縦: 1em,  横: 2em */
-    padding-top:    1em; /* 上 */
-    padding-bottom: 1em; /* 下 */
-    padding-left:   1em; /* 左 */
-    padding-right:  1em; /* 右 */
+  padding: 1em;        /* 周囲に一文字分の余白 */
+  padding: 1em 2em;    /* 縦: 1em,  横: 2em */
+  padding-top:    1em; /* 上 */
+  padding-bottom: 1em; /* 下 */
+  padding-left:   1em; /* 左 */
+  padding-right:  1em; /* 右 */
 }
 ```
 
@@ -440,12 +445,12 @@ div {
 
 ```css
 div {
-    margin: 1em;        /* 周囲に一文字分の隙間 */
-    margin: 1em 2em;    /* 縦: 1em,  横: 2em */
-    margin-top:    1em; /* 上 */
-    margin-bottom: 1em; /* 下 */
-    margin-left:   1em; /* 左 */
-    margin-right:  1em; /* 右 */
+  margin: 1em;        /* 周囲に一文字分の隙間 */
+  margin: 1em 2em;    /* 縦: 1em,  横: 2em */
+  margin-top:    1em; /* 上 */
+  margin-bottom: 1em; /* 下 */
+  margin-left:   1em; /* 左 */
+  margin-right:  1em; /* 右 */
 }
 ```
 
@@ -474,9 +479,9 @@ div {
 
 ```css
 div {
-    position: absolute;
-    top:  10px; /* 上から 10px */
-    left: 20px; /* 左から 20px */
+  position: absolute;
+  top:  10px; /* 上から 10px */
+  left: 20px; /* 左から 20px */
 }
 ```
 
@@ -489,15 +494,81 @@ div {
 **子要素を横並び**に配置することができる。
 
 ```html
-<div class="flex">
-    <div> ... </div>
-    <div> ... </div>
-    <div> ... </div>
+<div class="item-list">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
 </div>
 ```
 
 ```css
-.flex {
-    display: flex;
+.item-list {
+  display: flex;
 }
 ```
+
+<figure>
+<div class="item-list">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+
+<style scoped>
+.item-list {
+  display: flex;
+}
+.item {
+  background-color: #ccc;
+  padding: 5px 10px;
+}
+.item:nth-child(1) {
+  background-color: hsl(0, 80%, 90%);
+}
+.item:nth-child(2) {
+  background-color: hsl(90, 80%, 90%);
+}
+.item:nth-child(3) {
+  background-color: hsl(180, 80%, 90%);
+}
+</style>
+</figure>
+
+---
+
+さらに、`gap` プロパティで **各子要素の隙間** を指定することができる。
+
+```css
+.item-list {
+  display: flex;
+  gap: 20px; /* 各要素の隙間 */
+}
+```
+
+<figure>
+<div class="item-list">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+
+<style scoped>
+.item-list {
+  display: flex;
+  gap: 20px;
+}
+.item {
+  background-color: #ccc;
+  padding: 5px 10px;
+}
+.item:nth-child(1) {
+  background-color: hsl(0, 80%, 90%);
+}
+.item:nth-child(2) {
+  background-color: hsl(90, 80%, 90%);
+}
+.item:nth-child(3) {
+  background-color: hsl(180, 80%, 90%);
+}
+</style>
+</figure>
