@@ -1,15 +1,14 @@
 ---
 marp: true
 paginate: true
-theme: default
-style: @import "../.theme/style.css";
+theme: custom
 ---
 
-<div id="cover">
-  <h1 class="logo"><b>CODE</b>_THE_WEB #3</h1>
-  <p class="title">コードでウェブをつくろう #3</p>
-  <p class="author">&copy; 2023 Satoshi Soma</p>
-</div>
+<!-- _class: cover -->
+
+<h1 class="logo"><b>CODE</b>_THE_WEB #3</h1>
+<p class="title">コードでウェブをつくろう #3</p>
+<p class="author">&copy; 2023 Satoshi Soma</p>
 
 ---
 
