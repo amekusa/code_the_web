@@ -1,5 +1,0 @@
-#!/bin/bash
-cd ~/Desktop/code_the_web_2023
-git reset --hard
-git pull
-
