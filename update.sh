@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ~/Desktop/code_the_web_2024
+cd "$(dirname "$0")"
 git reset --hard
 git pull origin master
 
