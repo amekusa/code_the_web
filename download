@@ -1,12 +1,13 @@
 #!/bin/bash
 prj="code_the_web"
+src="https://github.com/amekusa/code_the_web"
 dst="$HOME/Desktop/${prj}_$(date +%Y)"
 if [ -e "$dst" ]; then
 	echo "//// ERROR //// The destination: $dst already exists."
 	exit 1
 fi
 xcode-select --install
-if ! git clone https://github.com/amekusa/art_of_code "$dst"; then
+if ! git clone "$src" "$dst"; then
 	echo "//// ERROR //// git clone failed."
 	exit 1
 fi
@@ -16,6 +17,7 @@ if [ ! -d "$dst" ]; then
 fi
 echo
 echo "---- SUCCESS ----"
+echo "src: $src"
 echo "dst: $dst"
 echo "================="
 echo
