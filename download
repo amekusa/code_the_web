@@ -1,7 +1,6 @@
 #!/bin/bash
-prj="code_the_web"
 src="https://github.com/amekusa/code_the_web"
-dst="$HOME/Desktop/${prj}_$(date +%Y)"
+dst="$HOME/Desktop/code_the_web_$(date +%Y)"
 if [ -e "$dst" ]; then
 	echo "//// ERROR //// The destination: $dst already exists."
 	exit 1
