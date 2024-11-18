@@ -8,7 +8,7 @@ theme: custom
 
 <h1 class="logo"><b>CODE</b>_THE_WEB #2</h1>
 <p class="title">コードでウェブをつくろう #2</p>
-<p class="author">&copy; 2023 Satoshi Soma</p>
+<p class="author">&copy; 2024 Satoshi Soma</p>
 
 ---
 
@@ -109,7 +109,7 @@ HTML コードを編集している際、*Live Preview* プラグインを利用
 1. VS Code で HTML ファイルを開く
 2. *ウィンドウ右上*の「**プレビューの表示**」ボタンをクリック
 
-<small>（真ん中のアイコン ↓）</small>
+<small style="margin-left: 245px">↓ 虫眼鏡のアイコン</small>
 ![](img/preview-icon.png)
 
 3. ウィンドウ右半分にプレビューが表示される

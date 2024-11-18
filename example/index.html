@@ -1,67 +1,191 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>タイトル</title> 
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<head>
+<meta charset="utf-8">
+<title>ページのタイトル</title>
 
-        <!-- ヘッダー -->
-        <div class="header">
+<style>
+/* ---- CSS 記述開始 ---- */
 
-            <!-- タイトル -->
-            <a class="title" href="index.html">
-                <span class="bracket">{</span> CODE_THE_WEB <span class="bracket">}</span>
-            </a>
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
-        </div>
+/* 基本のスタイル */
+body {
+  font-size: 16px;
+  line-height: 1.75; /* 二分四分アキ */
+  margin: 0;
+}
 
-        <!-- 中央パート -->
-        <div class="middle">
+/* リンク */
+a {
+  text-decoration: none; /* アンダーラインを消す */
+  color: inherit; /* 文字色を親から継承 */
+}
 
-            <!-- サイドバー -->
-            <div class="sidebar">
+/* 大見出し, 見出し, 小見出し */
+h1, h2, h3 {
+  line-height: 1.25; /* 見出しは行間を詰める */
+}
 
-                <!-- メニュー -->
-                <ul class="menu">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="how_to_code.html">How to code</a>
-                    </li>
-                    <li>
-                        <a href="reference.html">Reference</a>
-                    </li>
-                </ul>
+/* ヘッダー（.title を含むエリア） */
+.header {
+  position: relative; /* 子要素の基準位置とする */
+  height: 250px;
+  background-color: hsl(208, 13%, 28%);
+  color: white;
+}
 
-            </div>
+/* サイトのタイトル */
+.title {
+  position: absolute; /* 位置を絶対指定（親要素が基準） */
+  left: 50px;         /* 左端からの位置 */
+  bottom: 100px;      /* 下端からの位置 */
 
-            <!-- メインコンテンツ -->
-            <div class="main">
-                <h1>The quick brown fox jumps over the lazy dog</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor, nisl vitae lobortis ultrices, dui diam volutpat ligula, sed venenatis lorem nunc non tellus. Donec cursus bibendum maximus. Nullam eu orci tincidunt, eleifend leo imperdiet, iaculis mi. Nulla posuere rutrum lobortis. Pellentesque faucibus nec ex at commodo. Vivamus at ullamcorper dui, at suscipit leo. Proin in mi eget sem congue vulputate eu eget ex. Nulla libero justo, molestie vel mollis nec, imperdiet sit amet ipsum. Proin molestie est elit, euismod convallis nulla egestas id.</p>
-                <p>Donec dictum pulvinar placerat. Aenean eget nulla odio. Etiam vel semper est, a hendrerit odio. Donec imperdiet quam sapien. Suspendisse sagittis vehicula eleifend. Nulla vehicula, ex vel sodales sollicitudin, dui mauris pharetra lacus, vel egestas nunc libero nec augue. Duis libero arcu, maximus porttitor dolor quis, pharetra porttitor urna. Pellentesque vitae purus tempor, efficitur lacus non, eleifend nisl. Nulla sit amet dapibus mi. Nunc pharetra risus lorem, quis tristique ex facilisis sit amet. Fusce vitae molestie justo, viverra scelerisque nibh. Integer fringilla, sapien ultrices sodales pellentesque, leo nisi vehicula neque, in suscipit orci nunc eu urna.</p>
-                <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Sed finibus odio vitae turpis lobortis, ullamcorper suscipit neque varius. Ut pretium felis elit, quis mollis mauris vulputate ut. Vestibulum eu tempus diam. Donec vestibulum congue ex eget malesuada. Vivamus ac lacus vel dui fermentum ultricies. Sed porta tincidunt sem id bibendum. Etiam sit amet elit vel turpis pellentesque facilisis. Curabitur fermentum ut tortor vel bibendum. Nunc leo neque, molestie ut justo pellentesque, pellentesque tempor nulla. Ut elementum ut nulla et scelerisque. Aenean commodo tincidunt dolor sit amet iaculis. Etiam lobortis tempor accumsan. Phasellus consequat odio quis vestibulum ullamcorper. Donec eget augue ac mauris placerat viverra quis id urna.</p>
-                <p>Quisque consectetur enim eros, nec dignissim magna gravida nec. Aliquam egestas nisi sed odio mattis accumsan. Nam auctor nunc ligula, mattis rutrum augue malesuada at. Mauris id lorem risus. Fusce at odio at mi efficitur laoreet in ac urna. Donec ipsum velit, feugiat quis libero vitae, euismod egestas tellus. In in felis scelerisque lectus porta imperdiet. Duis fringilla ex sem, eget pulvinar libero consectetur et. Donec id sodales felis. Nam lobortis ac lorem sit amet vestibulum. Donec vitae erat blandit, vestibulum ex ac, luctus ex. Maecenas vel turpis a leo auctor tristique. Pellentesque ut congue nisi. In placerat enim sit amet nibh ullamcorper posuere. Integer venenatis, nisi eget rutrum condimentum, orci eros fringilla diam, a porta ex magna quis velit.</p>
-                <p>Vestibulum libero arcu, posuere at ultricies ut, suscipit quis erat. Ut iaculis fermentum felis, eget iaculis augue aliquam at. Duis viverra condimentum est, a efficitur felis tempor sed. Curabitur egestas ipsum ac ipsum scelerisque, ut ornare enim blandit. Suspendisse ullamcorper at mi vel pulvinar. Etiam eu turpis ac nunc imperdiet consequat et eget est. Nam a magna pulvinar, suscipit felis ut, ultrices urna. Proin non placerat diam. Nullam dolor augue, iaculis ut scelerisque nec, accumsan sit amet dui.</p>
-            </div>
+  font-size: 2em;
+  font-family: Rockwell, "Courier New", monospace;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: .2em;
+}
+.title small { /* 副題 */
+  font-size: 21px;
+}
 
-        </div>
+/* メニュー */
+.menu {
+  display: flex; /* 子要素を横並び配置に */
+  justify-content: center; /* 子要素を中央寄せ */
+  list-style: none; /* リストの点（バレット）を消す */
 
-        <!-- フッター -->
-        <div class="footer">
+  margin: 0;  /* 隙間なし */
+  padding: 0; /* 余白なし */
 
-            <q class="quote">
-                Do not repeat yourself.
-            </q>
+  font-family: Rockwell, "Courier New", monospace;
+  letter-spacing: .1em;
 
-            <p class="copyright">
-                <span class="product">CODE_THE_WEB</span> <span class="copy">&copy;</span> 2020 Satoshi Soma
-            </p>
+  color: white;
+  background-color: hsl(208, 18%, 12%);
+}
+.menu li a {
+  display: block;
+  padding: 1em 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  opacity: .5; /* 半透明 */
+  transition: all .5s; /* ゆっくり変化 */
+}
+.menu li a:hover { /* マウスホバー時 */
+  opacity: 1; /* 不透明化 */
+  background-color: rgba(255, 255, 255, .5);
+}
 
-        </div>
+/* 中央パート（.main と .sidebar を含むエリア） */
+.middle {
+}
 
-    </body>
+/* メインコンテンツ */
+.main {
+  max-width: 40em; /* 最大幅 */
+  padding: 32px 36px; /* 余白: 縦 横 */
+}
+.main a { /* リンク */
+  color: hotpink;
+}
+
+
+
+
+/* フッター */
+.footer {
+  position: relative;
+  height: 200px;
+  background-color: hsl(208, 13%, 28%);
+  color: white;
+}
+/* コピーライト表記 */
+.copyright {
+  position: absolute;
+  right: 36px;
+  bottom: 32px;
+  margin: 0;
+}
+.copyright .product {
+  font-family: Rockwell, "Courier New", monospace;
+}
+.copyright .copy {
+  font-size: 1.5em;
+  vertical-align: -.15em;
+}
+
+
+
+/* ヘッダー, 中央, フッター共通の設定 */
+.header,
+.middle,
+.footer {
+  box-sizing: border-box; /* パディングを高さ&幅の計算に含める */
+  min-width: 320px; /* 最小幅 */
+}
+
+/* //// CSS 記述終了 //// */
+</style>
+</head>
+
+<body>
+<!------ ブラウザ表示開始 ------>
+
+<!---- ヘッダー ---->
+<div class="header">
+
+  <!-- タイトル -->
+  <a class="title" href="index.html">
+    CODE_THE_WEB<br>
+    <small>コードでウェブをつくろう</small>
+  </a>
+
+</div>
+<!--//// ヘッダー終了 ////-->
+
+<!---- 中央パート ---->
+<div class="middle">
+  <!-- メニュー -->
+  <ul class="menu">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+      <a href="how_to_code.html">How to code</a>
+    </li>
+    <li>
+      <a href="reference.html">Reference</a>
+    </li>
+  </ul>
+
+  <!-- メインコンテンツ -->
+  <div class="main">
+    <h1>The quick brown fox jumps over the lazy dog</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor, nisl vitae lobortis ultrices, dui diam volutpat ligula, sed venenatis lorem nunc non tellus. Donec cursus bibendum maximus. Nullam eu orci tincidunt, eleifend leo imperdiet, iaculis mi. Nulla posuere rutrum lobortis. Pellentesque faucibus nec ex at commodo. Vivamus at ullamcorper dui, at suscipit leo. Proin in mi eget sem congue vulputate eu eget ex. Nulla libero justo, molestie vel mollis nec, imperdiet sit amet ipsum. Proin molestie est elit, euismod convallis nulla egestas id.</p>
+    <p>Donec dictum pulvinar placerat. Aenean eget nulla odio. Etiam vel semper est, a hendrerit odio. Donec imperdiet quam sapien. Suspendisse sagittis vehicula eleifend. Nulla vehicula, ex vel sodales sollicitudin, dui mauris pharetra lacus, vel egestas nunc libero nec augue. Duis libero arcu, maximus porttitor dolor quis, pharetra porttitor urna. Pellentesque vitae purus tempor, efficitur lacus non, eleifend nisl. Nulla sit amet dapibus mi. Nunc pharetra risus lorem, quis tristique ex facilisis sit amet. Fusce vitae molestie justo, viverra scelerisque nibh. Integer fringilla, sapien ultrices sodales pellentesque, leo nisi vehicula neque, in suscipit orci nunc eu urna.</p>
+    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Sed finibus odio vitae turpis lobortis, ullamcorper suscipit neque varius. Ut pretium felis elit, quis mollis mauris vulputate ut. Vestibulum eu tempus diam. Donec vestibulum congue ex eget malesuada. Vivamus ac lacus vel dui fermentum ultricies. Sed porta tincidunt sem id bibendum. Etiam sit amet elit vel turpis pellentesque facilisis. Curabitur fermentum ut tortor vel bibendum. Nunc leo neque, molestie ut justo pellentesque, pellentesque tempor nulla. Ut elementum ut nulla et scelerisque. Aenean commodo tincidunt dolor sit amet iaculis. Etiam lobortis tempor accumsan. Phasellus consequat odio quis vestibulum ullamcorper. Donec eget augue ac mauris placerat viverra quis id urna.</p>
+    <p>Quisque consectetur enim eros, nec dignissim magna gravida nec. Aliquam egestas nisi sed odio mattis accumsan. Nam auctor nunc ligula, mattis rutrum augue malesuada at. Mauris id lorem risus. Fusce at odio at mi efficitur laoreet in ac urna. Donec ipsum velit, feugiat quis libero vitae, euismod egestas tellus. In in felis scelerisque lectus porta imperdiet. Duis fringilla ex sem, eget pulvinar libero consectetur et. Donec id sodales felis. Nam lobortis ac lorem sit amet vestibulum. Donec vitae erat blandit, vestibulum ex ac, luctus ex. Maecenas vel turpis a leo auctor tristique. Pellentesque ut congue nisi. In placerat enim sit amet nibh ullamcorper posuere. Integer venenatis, nisi eget rutrum condimentum, orci eros fringilla diam, a porta ex magna quis velit.</p>
+    <p>Vestibulum libero arcu, posuere at ultricies ut, suscipit quis erat. Ut iaculis fermentum felis, eget iaculis augue aliquam at. Duis viverra condimentum est, a efficitur felis tempor sed. Curabitur egestas ipsum ac ipsum scelerisque, ut ornare enim blandit. Suspendisse ullamcorper at mi vel pulvinar. Etiam eu turpis ac nunc imperdiet consequat et eget est. Nam a magna pulvinar, suscipit felis ut, ultrices urna. Proin non placerat diam. Nullam dolor augue, iaculis ut scelerisque nec, accumsan sit amet dui.</p>
+  </div>
+
+</div>
+<!--//// 中央パート終了 ////-->
+
+<!---- フッター ---->
+<div class="footer">
+
+  <p class="copyright">
+    <span class="product">CODE_THE_WEB</span> <span class="copy">&copy;</span> 2020 Satoshi Soma
+  </p>
+
+</div>
+<!--//// フッター終了 ////-->
+
+<!--//////// ブラウザ表示終了 ////////-->
+</body>
 </html>
