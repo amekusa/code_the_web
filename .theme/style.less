@@ -87,14 +87,22 @@
   }
 }
 
+.red,
+.green,
+.blue {
+  color: hsl(var(--hue), 50%, 50%);
+  > code {
+    color: hsl(var(--hue), 100%, 70%);
+  }
+}
 .red {
-  color: #b44;
+  --hue: 0;
 }
 .green {
-  color: #4b4;
+  --hue: 120;
 }
 .blue {
-  color: #44b;
+  --hue: 240;
 }
 
 .fl {
