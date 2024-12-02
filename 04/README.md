@@ -8,7 +8,7 @@ theme: custom
 
 <h1 class="logo"><b>CODE</b>_THE_WEB #4</h1>
 <p class="title">コードでウェブをつくろう #4</p>
-<p class="author">&copy; 2023 Satoshi Soma</p>
+<p class="author">&copy; 2024 Satoshi Soma</p>
 
 ---
 
@@ -16,17 +16,17 @@ theme: custom
 *`class` 属性 (HTML)*
 
 ```html
-<tag class="クラス名"> ... </tag>
+<タグ名 class="クラス名"> ... </タグ名>
 ```
 
 ```html
-<tag class="クラスA クラスB"> ... </tag> <!-- スペースを挟んで複数のクラス -->
+<タグ名 class="クラスA クラスB"> ... </タグ名> <!-- スペースを挟んで複数のクラス -->
 ```
 
-- タグに「**クラス名（分類名）**」を与える
-- 「クラス名」は*自由*だが**半角英数を推奨**
-- `class` 属性そのものに特別な機能は無い
-- 基本的に**スタイルシート（CSS）と組み合わせて使う**
+- タグに「**クラス名（分類名）**」を与える。
+- 「クラス名」は*自由*だが**半角英数**を推奨。
+- `class` 属性そのものに特別な機能は無い。
+- CSS において、クラス名を**スタイルの適用先**として指定できる。
 
 ---
 
@@ -424,48 +424,63 @@ div {
 ### 余白
 **`padding`** プロパティ:
 - 余白の指定（単位: `px`, `em` など）
+- 余白は要素の**内側**に作られる。
+
+<div class="cols c32">
 
 ```css
 div {
-  padding: 1em;        /* 周囲に一文字分の余白 */
-  padding: 1em 2em;    /* 縦: 1em,  横: 2em */
-  padding-top:    1em; /* 上 */
-  padding-bottom: 1em; /* 下 */
-  padding-left:   1em; /* 左 */
-  padding-right:  1em; /* 右 */
+  padding: 1em;             /* 周囲に 1em 分の余白 */
+  padding: 1em 2em;         /* 上下: 1em, 左右: 2em */
+  padding: 1em 2em 3em 4em; /* 上から時計回りに指定 */
+
+  padding-top:    1em;      /* 上のみ */
+  padding-bottom: 1em;      /* 下のみ */
+  padding-left:   1em;      /* 左のみ */
+  padding-right:  1em;      /* 右のみ */
 }
 ```
+
+![](paddings.png)
+</div>
 
 ---
 
 ### 隙間（マージン）
 **`margin`** プロパティ:
 - 隙間の指定（単位: `px`, `em` など）
+- 隙間は要素の**外側**に作られる。
+
+<div class="cols c32">
 
 ```css
 div {
-  margin: 1em;        /* 周囲に一文字分の隙間 */
-  margin: 1em 2em;    /* 縦: 1em,  横: 2em */
-  margin-top:    1em; /* 上 */
-  margin-bottom: 1em; /* 下 */
-  margin-left:   1em; /* 左 */
-  margin-right:  1em; /* 右 */
+  margin: 1em;             /* 周囲に 1em 分の隙間 */
+  margin: 1em 2em;         /* 上下: 1em, 左右: 2em */
+  margin: 1em 2em 3em 4em; /* 上から時計回りに指定 */
+
+  margin-top:    1em;      /* 上のみ */
+  margin-bottom: 1em;      /* 下のみ */
+  margin-left:   1em;      /* 左のみ */
+  margin-right:  1em;      /* 右のみ */
 }
 ```
+
+![](margins.png)
+</div>
 
 ---
 
 ### `padding` と `margin` の違い
-この二つは混同されがちだが、**役割が明確に違う。**
+この二つは混同されがちだが、**役割が明確に違う**ので注意。
 
-"padding" とは **「詰め物」** という意味。
-要素の中に **見えない詰め物** を入れて、普通より**大きく見せる**のが `padding` 。
-**幅と高さを水増し**しているということ。
+"padding" とは「**詰め物**」という意味。
+要素の内側に*見えない詰め物*を入れて、**幅と高さを水増し**する。
 
-`margin` はより本来的な意味での余白で、
-要素の **外側** に **不可侵領域** を作り上げる。
-他の要素に対して **どれだけ距離を置くか** を指定するプロパティだといえる。
-また、**配置を調整**するのにも使えるだろう。
+`margin` は**要素と要素の間に隙間を空ける**のが目的。
+要素の外側に**不可侵領域**を設定する。
+**他の要素に対してどれだけ距離を置くか**を指定するプロパティだといえる。
+位置を微調整する目的でも使われることが多い。
 
 ---
 
@@ -488,31 +503,6 @@ div {
 
 ---
 
-### フレックスボックス (Flex Box)
-**`display`** プロパティに **`flex`** を指定すると、
-**子要素を横並び**に配置することができる。
-
-```html
-<div class="item-list">
-  <div class="item">Item 1</div>
-  <div class="item">Item 2</div>
-  <div class="item">Item 3</div>
-</div>
-```
-
-```css
-.item-list {
-  display: flex;
-}
-```
-
-<figure>
-<div class="item-list">
-  <div class="item">Item 1</div>
-  <div class="item">Item 2</div>
-  <div class="item">Item 3</div>
-</div>
-
 <style scoped>
 .item-list {
   display: flex;
@@ -531,25 +521,39 @@ div {
   background-color: hsl(180, 80%, 90%);
 }
 </style>
-</figure>
 
----
+### フレックスボックス (Flex Box)
+**`display`** プロパティに **`flex`** を指定すると、
+**直下のブロック要素を横並び**に配置することができる。
 
-さらに、`gap` プロパティで **各子要素の隙間** を指定することができる。
+<div class="cols c32">
+<div>
+
+```html
+<div class="item-list">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
+```
 
 ```css
 .item-list {
   display: flex;
-  gap: 20px; /* 各要素の隙間 */
 }
 ```
 
+</div>
 <figure>
 <div class="item-list">
   <div class="item">Item 1</div>
   <div class="item">Item 2</div>
   <div class="item">Item 3</div>
 </div>
+</figure>
+</div>
+
+---
 
 <style scoped>
 .item-list {
@@ -570,4 +574,25 @@ div {
   background-color: hsl(180, 80%, 90%);
 }
 </style>
+
+さらに、`gap` プロパティで **各子要素の隙間** を指定することができる。
+
+<div class="cols c32">
+<div>
+
+```css
+.item-list {
+  display: flex;
+  gap: 20px; /* 各要素の隙間 */
+}
+```
+
+</div>
+<figure>
+<div class="item-list">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+</div>
 </figure>
+</div>
