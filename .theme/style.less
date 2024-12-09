@@ -105,6 +105,15 @@
   --hue: 240;
 }
 
+.bg {
+  padding: .75em 1em;
+  border-radius: 1em;
+  backdrop-filter: blur(.25em);
+  &.white {
+    background-color: #fffb;
+  }
+}
+
 .fl {
   display: block;
   margin: 0;
@@ -123,6 +132,9 @@
 .cols {
   display: flex;
   width: 100%;
+  &.gap {
+    gap: 1.5em;
+  }
   > * {
     display: block;
     flex: 1;
@@ -142,6 +154,13 @@
   &.c32 > *:first-child,
   &.c23 > *:last-child {
     flex: 3;
+  }
+}
+
+a {
+  code {
+    background-color: var(--color-accent-fg);
+    color: white;
   }
 }
 
@@ -175,7 +194,7 @@ em {
   }
 }
 strong {
-  background:linear-gradient(transparent 60%, #0f66 60%);
+  background:linear-gradient(transparent 70%, #0f66 70%);
 
   code {
     color: #4f9;
