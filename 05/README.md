@@ -8,7 +8,125 @@ theme: custom
 
 <h1 class="logo"><b>CODE</b>_THE_WEB #5</h1>
 <p class="title">コードでウェブをつくろう #5</p>
-<p class="author">&copy; 2023 Satoshi Soma</p>
+<p class="author">&copy; 2024 Satoshi Soma</p>
+
+---
+
+<style scoped>
+figure {
+  font-size: 1.25em;
+  font-weight: bold;
+  font-style: italic;
+}
+figure span,
+figure div {
+  color: #0004;
+}
+.a {
+  background-color: #fcc;
+}
+.b {
+  background-color: #cfc;
+}
+.c {
+  background-color: #ccf;
+}
+</style>
+
+## 前回のおさらい 1/3
+
+#### インライン要素
+
+<div class="cols">
+
+<figure>
+<span class="a">A Quick Brown Fox</span>
+<span class="b">Jumps Over</span>
+<span class="c">The Lazy Dog.</span>
+</figure>
+
+<div>
+
+- `<span>`, `<a>`, `<strong>`, `<img>`, etc.
+- 幅が内容次第。
+- 勝手に改行されない。
+- 一行に収まりきらない分は折り返される。
+
+</div>
+
+</div><!-- /cols -->
+
+#### ブロック要素
+
+<div class="cols">
+
+<figure>
+<div class="a">A Quick Brown Fox</div>
+<div class="b">Jumps Over</div>
+<div class="c">The Lazy Dog.</div>
+</figure>
+
+<div>
+
+- `<div>`, `<p>`, `<h1>`, etc.
+- 内容に関わらず、幅が最大になる。
+- 常に新しい行に表示される。
+
+</div>
+
+</div><!-- /cols -->
+
+---
+
+## 前回のおさらい 2/3
+
+**`padding`** プロパティ:
+- 余白の指定（単位: `px`, `em` など）
+- 余白は要素の**内側**に作られる。
+
+<div class="cols c32">
+
+```css
+div {
+  padding: 1em;             /* 周囲に 1em 分の余白 */
+  padding: 1em 2em;         /* 上下: 1em, 左右: 2em */
+  padding: 1em 2em 3em 4em; /* 上から時計回りに指定 */
+
+  padding-top:    1em;      /* 上のみ */
+  padding-bottom: 1em;      /* 下のみ */
+  padding-left:   1em;      /* 左のみ */
+  padding-right:  1em;      /* 右のみ */
+}
+```
+
+![](../04/paddings.png)
+</div>
+
+---
+
+## 前回のおさらい 3/3
+
+**`margin`** プロパティ:
+- 隙間の指定（単位: `px`, `em` など）
+- 隙間は要素の**外側**に作られる。
+
+<div class="cols c32">
+
+```css
+div {
+  margin: 1em;             /* 周囲に 1em 分の隙間 */
+  margin: 1em 2em;         /* 上下: 1em, 左右: 2em */
+  margin: 1em 2em 3em 4em; /* 上から時計回りに指定 */
+
+  margin-top:    1em;      /* 上のみ */
+  margin-bottom: 1em;      /* 下のみ */
+  margin-left:   1em;      /* 左のみ */
+  margin-right:  1em;      /* 右のみ */
+}
+```
+
+![](../04/margins.png)
+</div>
 
 ---
 
