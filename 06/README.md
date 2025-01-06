@@ -8,7 +8,7 @@ theme: custom
 
 <h1 class="logo"><b>CODE</b>_THE_WEB #6</h1>
 <p class="title">コードでウェブをつくろう #6</p>
-<p class="author">&copy; 2022 Satoshi Soma</p>
+<p class="author">&copy; 2024 Satoshi Soma</p>
 
 ---
 
@@ -213,9 +213,12 @@ color: #000000;
 
 ---
 
-## 複数のページを作る
+# 複数のページを作る
+
+---
+
 世の中には 1 ページのみで完結しているウェブサイトも珍しくはないが、
-一般的なのは複数のウェブページで構成されている形式だ。
+やはり一般的なのは複数のウェブページで構成されている形式だ。
 
 ---
 
@@ -503,7 +506,7 @@ a:hover {
 }
 ```
 
-エディタとブラウザで [06_hover-and-active.html](06_hover-and-active.html) を開いて
+エディタとブラウザで [06_hover-and-active.html](../06_hover-and-active.html) を開いて
 実際に動くコードを確認してみよう。
 
 ---
@@ -522,18 +525,50 @@ a:hover {
 
 ---
 
-### `transition`
-**`transition` プロパティ** を利用することで、
-**特定のプロパティの値の変化を滑らかに推移させる**ことができる。
+<style scoped>
+figure .shape {
+  display: block;
+  width: 8em;
+  height: 8em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: turquoise;
+  border-radius: 1em;
+  transition: all 2s ease-out;
+  transform: rotate(20deg);
+}
+figure .shape:hover {
+  background-color: crimson;
+  border-radius: 4em;
+  transform: rotate(359deg);
+  transition: all 1s ease-out;
+}
+</style>
 
-*Transition* とは **“遷移”** や **“移り変わり“** という意味。
+### `transition`
+
+<div class="cols c21">
+
+<div>
+
+*`transition` プロパティ* を利用することで、
+**特定のプロパティの値の変化を滑らかに推移させる**
+ことができる。
+<small>（*Transition* とは「*遷移*」や「*移り変わり*」という意味。）</small>
+
+</div>
+<figure>
+  <a class="shape"></a>
+</figure>
+
+</div>
 
 ---
 
 #### `transition` の書き方:
 ```css
-.xxx {
-    transition: プロパティ名 変化時間;
+セレクタ {
+  transition: プロパティ名 変化時間;
 }
 ```
 
@@ -544,12 +579,12 @@ a:hover {
 単位は **`s`** で、*Seconds（秒）* を表す。
 
 ```css
-.xxx {
+セレクタ {
     transition: color 1s; /* color を 1秒 かけて変化させる */
 }
 ```
 
-[07_transition.html](07_transition.html) をブラウザとエディタで開いて、
+[07_transition.html](../07_transition.html) をブラウザとエディタで開いて、
 実際の動作とコードを確認しよう。
 
 ---
@@ -562,7 +597,7 @@ a:hover {
 これによって **全てのプロパティ** に一括で `transition` を適用することができる。
 
 ```css
-.xxx {
+セレクタ {
     transition: all 1s; /* 全てのプロパティを 1秒 かけて変化させる */
 }
 ```
@@ -572,7 +607,7 @@ a:hover {
 もう一つの方法は **`,（カンマ）`区切りで複数の `transition` 値** を列挙すること。
 
 ```css
-.xxx {
+セレクタ {
     transition: color 1s, width 2s; /* color を 1秒 */
                                     /* width を 2秒 */
 }
@@ -584,30 +619,35 @@ a:hover {
 ---
 
 #### `transition` の緩急を変える
-デフォルトの設定だと、`transition` による遷移は、
-**出だし**と**終わりぎわ**が**緩やか**に変化する。
-
-    A  -  - - -- --- -->-- --- -- - -  -  B
-
-この変化の速度の **緩急（カーブ）** を変えてみよう。
-
----
-
+次は `transition` の変化速度の**緩急**を変えてみよう。
 緩急は `変化時間` の後にスペースを挟んで指定することができる。
+
 ```css
-.xxx {
+セレクタ {
     transition: プロパティ名 変化時間 緩急;
 }
 ```
 
-`緩急` に入る値は以下のうちのいずれか:
+`緩急` には以下のキーワードの中から適切なものを選択する。
+`ease` `ease-in` `ease-out` `ease-in-out` `linear`
+
+---
+
+キーワード毎の動作はだいたい以下のとおり。
+
 | 値 | 動作 |
 |:---|:---|
+| `linear` | 始まりから終わりまで一定の速さ |
 | `ease` | 始まりと終わりが緩やか（デフォルト）
-| `ease-in` | だんだん速く |
-| `ease-out` | だんだん遅く |
+| `ease-in` | 始まりが遅く、だんだん速くなる |
+| `ease-out` | 始まりが早く、だんだん遅くなる |
 | `ease-in-out` | `ease`をより強調 |
-| `linear` | 一定の速さ |
+
+---
+
+キーワード毎の速度の変化をグラフに表すと以下のとおり。
+
+![](img/timing-functions.png)
 
 ---
 
