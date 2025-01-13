@@ -8,7 +8,7 @@ theme: custom
 
 <h1 class="logo"><b>CODE</b>_THE_WEB #7</h1>
 <p class="title">コードでウェブをつくろう #7</p>
-<p class="author">&copy; 2022 Satoshi Soma</p>
+<p class="author">&copy; 2024 Satoshi Soma</p>
 
 ---
 
