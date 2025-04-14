@@ -8,7 +8,7 @@ theme: custom
 
 <h1 class="logo"><b>CODE</b>_THE_WEB</h1>
 <p class="title">コードでウェブをつくろう</p>
-<p class="author">&copy; 2024 Satoshi Soma</p>
+<p class="author">&copy; 2025 Satoshi Soma</p>
 
 ---
 
@@ -129,7 +129,7 @@ VS Code はマイクロソフトが開発しているコードエディタで、
 - 高機能（コード編集に欲しい機能は一通り揃っている）
 - 比較的新しい（開発が盛ん）
 - Mac にも Windows にも対応している
-- ウェブ界隈ではほぼ**デファクトスタンダード（事実上の標準）**（2024 年現在）
+- ウェブ界隈ではほぼ**デファクトスタンダード（事実上の標準）**（2025 年現在）
   - <small>プロ, アマチュア問わず幅広いユーザー層。<br>使い方を身につけておけば今後も役に立ちそう</small>
 
 ---
@@ -156,13 +156,13 @@ VS Code の初期設定は英語なので、*日本語化プラグイン*をイ�
 1. *Terminal（ターミナル）* を開く
 2. 以下のコマンドを*コピー*し、Terminal に*ペースト*。その後 `Enter` でコマンド実行
 ```sh
-git clone https://github.com/amekusa/code_the_web.git ~/Desktop/code_the_web_2024
+git clone https://github.com/amekusa/code_the_web.git ~/Desktop/code_the_web_2025
 ```
-3. *デスクトップ*に *`code_the_web_2024`* フォルダができているか確認
-4. *VS Code* で `code_the_web_2024` フォルダを開く
-`ファイル` → `フォルダーを開く` → `デスクトップ` → `code_the_web_2024`
+3. *デスクトップ*に *`code_the_web_2025`* フォルダができているか確認
+4. *VS Code* で `code_the_web_2025` フォルダを開く
+`ファイル` → `フォルダーを開く` → `デスクトップ` → `code_the_web_2025`
 
-`code_the_web_2024` フォルダには今見ているスライドも含まれているので、いつでも好きな時に参照してください。場所: `01/README.html`
+`code_the_web_2025` フォルダには今見ているスライドも含まれているので、いつでも好きな時に参照してください。場所: `01/README.html`
 
 ---
 
