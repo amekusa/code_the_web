@@ -162,7 +162,7 @@ color: hsla(色相, 彩度, 明度, 不透明度); /* 不透明度: 0.0 - 1.0 */
 ---
 
 ### 演習
-[04_class.html](04_class.html) を `WORKSPACE` フォルダにコピーし、エディタで開こう。
+[04_class.html](../04_class.html) を `WORKSPACE` フォルダにコピーし、エディタで開こう。
 その中のサンプルコードを参考にしながら問題を解いてみよう。
 
 ---
@@ -188,7 +188,22 @@ color: hsla(色相, 彩度, 明度, 不透明度); /* 不透明度: 0.0 - 1.0 */
 
 感覚的には Adobe Illustrator や Photoshop における**グループ**や**レイヤー**の概念に近い。
 
+<div class="cols gap">
+<div>
+
 ```html
+<!-- バラバラ -->
+<h1>見出し</h1>
+<p>段落</p>
+<p>段落</p>
+<p>段落</p>
+```
+
+</div>
+<div>
+
+```html
+<!-- DIV で一まとめに -->
 <div>
   <h1>見出し</h1>
   <p>段落</p>
@@ -197,7 +212,10 @@ color: hsla(色相, 彩度, 明度, 不透明度); /* 不透明度: 0.0 - 1.0 */
 </div>
 ```
 
-[05_div-and-span.html](05_div-and-span.html) をエディターで開き、サンプルコードを見てみよう。
+</div>
+</div>
+
+[05_div-and-span.html](../05_div-and-span.html) をエディターで開き、サンプルコードを見てみよう。
 
 ---
 
