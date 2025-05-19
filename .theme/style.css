@@ -2,22 +2,77 @@
 /* @theme custom */
 /* marp base styles */
 @import-theme "default";
+.reset {
+  font-weight: normal;
+  font-size: var(--fs-m);
+  line-height: var(--lh-base);
+}
+.bare {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.rounded {
+  border-radius: 0.25em;
+}
+.thin {
+  opacity: 0.6;
+}
+.bg-red,
+.bg-green,
+.bg-blue {
+  color: white;
+}
+.bg-red {
+  background: var(--c-red);
+}
+.bg-green {
+  background: var(--c-green);
+}
+.bg-blue {
+  background: var(--c-blue);
+}
+.red,
+.green,
+.blue {
+  color: hsl(var(--hue), 50%, 50%);
+}
+.red > code,
+.green > code,
+.blue > code {
+  color: hsl(var(--hue), 100%, 70%);
+}
+.red {
+  --hue: 0;
+}
+.green {
+  --hue: 120;
+}
+.blue {
+  --hue: 240;
+}
 :root {
   --fs-s: 16pt;
   --fs-m: 18pt;
   --fs-l: 24pt;
   --fs-xl: 27pt;
   --fs-max: 48pt;
+  --ff-base: Helvetica, Arial, "Hiragino Kaku Gothic Pro", sans-serif;
   --ff-futura: Futura, "Century Gothic", sans-serif;
   --ff-code: Menlo, Monaco, "Courier New", monospace;
   --c-black: #334;
   --c-grey: #aac;
+  --c-grey-lt: #dde;
   --c-ink: #246;
+  --c-red: hsl(340, 70%, 50%);
+  --c-green: hsl(120, 50%, 50%);
+  --c-blue: hsl(240, 50%, 50%);
   --hl: 1.5pt;
   --gap: 1.5em;
+  --lh-base: 1.75;
   font-size: var(--fs-m);
-  font-family: Helvetica, Arial, "Hiragino Kaku Gothic Pro", sans-serif;
-  line-height: 1.75;
+  font-family: var(--ff-base);
+  line-height: var(--lh-base);
   color: var(--c-black);
 }
 :root.cover .logo {
@@ -64,25 +119,6 @@
   font-weight: bold;
   letter-spacing: 0.3em;
   text-shadow: 0 -0.3em 0 #60f4, 0 -0.75em 0 #0f66, 0 -1.4em 0 #ff08;
-}
-.red,
-.green,
-.blue {
-  color: hsl(var(--hue), 50%, 50%);
-}
-.red > code,
-.green > code,
-.blue > code {
-  color: hsl(var(--hue), 100%, 70%);
-}
-.red {
-  --hue: 0;
-}
-.green {
-  --hue: 120;
-}
-.blue {
-  --hue: 240;
 }
 .bg {
   padding: 0.75em 1em;
@@ -131,6 +167,9 @@
 .cols.c32 > *:first-child,
 .cols.c23 > *:last-child {
   flex: 3;
+}
+.grey-stripes {
+  background-image: repeating-linear-gradient(135deg, white 0, var(--c-grey-lt) 1px, var(--c-grey-lt) 2px, white 3px, white 10px);
 }
 a code {
   background-color: var(--color-accent-fg);
