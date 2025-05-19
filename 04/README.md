@@ -155,7 +155,7 @@ figure > * {
 ## 前回のおさらい 6/6
 *インライン (inline) 要素とは*
 
-<div class="cols c23">
+<div class="cols">
 
 - `<span>`
 - `<a>`
