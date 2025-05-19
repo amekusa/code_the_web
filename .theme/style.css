@@ -3,18 +3,30 @@
 /* marp base styles */
 @import-theme "default";
 :root {
-  font-size: 18pt;
+  --fs-s: 16pt;
+  --fs-m: 18pt;
+  --fs-l: 24pt;
+  --fs-xl: 27pt;
+  --fs-max: 48pt;
+  --ff-futura: Futura, "Century Gothic", sans-serif;
+  --ff-code: Menlo, Monaco, "Courier New", monospace;
+  --c-black: #334;
+  --c-grey: #aac;
+  --c-ink: #246;
+  --hl: 1.5pt;
+  --gap: 1.5em;
+  font-size: var(--fs-m);
   font-family: Helvetica, Arial, "Hiragino Kaku Gothic Pro", sans-serif;
   line-height: 1.75;
-  color: #334;
+  color: var(--c-black);
 }
 :root.cover .logo {
-  font-size: 48pt;
+  font-size: var(--fs-max);
 }
 :root.cover .title {
   font-weight: bold;
-  font-size: 24pt;
-  color: #246;
+  font-size: var(--fs-l);
+  color: var(--c-ink);
 }
 :root.cover .author {
   text-align: right;
@@ -27,7 +39,7 @@
   padding-left: 1.5em;
 }
 .logo {
-  font-family: Futura, "Century Gothic", sans-serif;
+  font-family: var(--ff-futura);
   font-weight: normal !important;
   letter-spacing: 0.1em;
   padding: 0;
@@ -83,15 +95,15 @@
 .fl {
   display: block;
   margin: 0;
-  margin-bottom: 0.75em;
+  margin-bottom: calc(var(--gap) * 0.5);
 }
 .fl.l {
   float: left;
-  margin-right: 1.5em;
+  margin-right: var(--gap);
 }
 .fl.r {
   float: right;
-  margin-left: 1.5em;
+  margin-left: var(--gap);
 }
 .cols {
   display: flex;
@@ -131,21 +143,21 @@ h3 {
 }
 h1,
 h2 {
-  color: #246;
+  color: var(--c-ink);
 }
 h2 {
-  font-size: 27pt;
+  font-size: var(--fs-xl);
 }
 h3 {
-  font-size: 24pt;
+  font-size: var(--fs-l);
 }
 h4,
 h5,
 h6 {
-  font-size: 18pt;
+  font-size: var(--fs-m);
 }
 small {
-  font-size: 16pt;
+  font-size: var(--fs-s);
 }
 em {
   font-weight: bold;
@@ -162,31 +174,31 @@ strong code {
   color: #4f9;
 }
 ol li::marker {
-  color: #aac;
+  color: var(--c-grey);
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   padding-right: 0.5em;
 }
 kbd {
-  background-color: #334;
+  background-color: var(--c-black);
   color: white;
-  font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 18pt;
+  font-family: var(--ff-code);
+  font-size: var(--fs-m);
   line-height: 1;
   padding: 0.1em 0.3em;
-  border: 0.1em solid #b1b1c5;
+  border: 0.1em solid var(--c-grey);
   border-radius: 0.3em;
 }
 table td,
 table th {
-  border: 1.5pt solid #aac;
+  border: var(--hl) solid var(--c-grey);
 }
 table thead td,
 table thead th {
   white-space: nowrap;
 }
 table.numtable {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-family: var(--ff-code);
 }
 table.numtable td {
   text-align: right;
@@ -297,5 +309,5 @@ code.hljs {
 code {
   background: #1e1e1e;
   color: #dcdcdc;
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-family: var(--ff-code);
 }
