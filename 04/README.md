@@ -93,13 +93,42 @@ h1, h2, h3 { （省略） }  /* カンマ区切りでまとめて指定 */
 
 ---
 
+<style scoped>
+figure {
+  border: .2em dashed var(--c-grey);
+  text-align: left;
+  font-weight: bold;
+  color: var(--c-grey);
+  padding: .25em .5em;
+}
+figure > * {
+  font-family: var(--ff-code);
+  color: white;
+  padding: .25em .5em;
+  margin: 0 0 .5em;
+  text-align: left;
+}
+</style>
+
 ## 前回のおさらい 5/6
 *ブロック (block) 要素とは*
+
+<div class="cols">
+
 - `<body>`
 - `<div>`
 - `<h1>`, `<h2>`, `<h3>`, ... `<h6>`
 - `<p>`
 - `<hr>` など
+
+<figure class="bare grey-stripes">
+ページ
+<div class="bg-red rounded reset">&lt;div&gt; <span class="thin">A Quick Brown Fox</span> &lt;/div&gt;</div>
+<h1 class="bg-green rounded reset">&lt;h1&gt; <span class="thin">Jumps Over</span> &lt;/h1&gt;</h1>
+<p class="bg-blue rounded reset">&lt;p&gt; <span class="thin">The Lazy Dog.</span> &lt;/p&gt;</p>
+</figure>
+
+</div>
 
 *特徴:*
 - 強制的に改行される（**常に新しい行に挿入される**）
@@ -107,12 +136,40 @@ h1, h2, h3 { （省略） }  /* カンマ区切りでまとめて指定 */
 
 ---
 
+<style scoped>
+figure {
+  border: .2em dashed var(--c-grey);
+  text-align: left;
+  font-weight: bold;
+  color: var(--c-grey);
+  padding: .25em .5em;
+}
+figure > * {
+  font-family: var(--ff-code);
+  color: white;
+  padding: .25em .5em;
+}
+</style>
+
+
 ## 前回のおさらい 6/6
 *インライン (inline) 要素とは*
+
+<div class="cols">
+
 - `<span>`
 - `<a>`
 - `<img>`
 - `<strong>` など
+
+<figure class="bare grey-stripes">
+ページ<br>
+<span class="bg-red rounded reset">&lt;span&gt; <span class="thin">A Quick Brown Fox</span> &lt;/span&gt;</span>
+<a class="bg-green rounded reset">&lt;a&gt; <span class="thin">Jumps Over</span> &lt;/a&gt;</a>
+<strong class="bg-blue rounded reset">&lt;strong&gt; <span class="thin">The Lazy Dog.</span> &lt;/strong&gt;</strong>
+</figure>
+
+</div>
 
 *特徴:*
 - 改行されない（改行するには `<br>` タグが必要）
