@@ -460,7 +460,26 @@ a {
 
 ---
 
+<style scoped>
+figure {
+  border: .2em dashed var(--c-grey);
+  text-align: left;
+  font-weight: bold;
+  color: var(--c-grey);
+  padding: .25em .5em;
+}
+figure div {
+  width: 50%;
+  height: 10em;
+  font-family: var(--ff-code);
+}
+</style>
+
 ### ブロックの幅と高さを変更
+
+<div class="cols gap">
+<div>
+
 **`width`** プロパティ:
 - 幅の指定 (単位: `px`, `em`, `%` など)
 
@@ -469,12 +488,20 @@ a {
 
 ```css
 div {
-  width: 240px; /* 幅: 240px */
-  height: 4em;  /* 高: 4文字分 */
+  width: 50%;   /* 幅: 親要素の 50% */
+  height: 10em; /* 高: 10 文字分 */
 }
 ```
 
 `%` で指定すると、**親要素のサイズに対する割合**として計算される。
+
+</div>
+<figure class="bare grey-stripes">
+ページ
+<div class="rounded bg-red">&lt;div&gt; <span class="thin">A Quick Brown Fox Jumps Over The Lazy Dog.</span> &lt;/div&gt;</div>
+</figure>
+</div>
+
 
 ---
 
@@ -561,21 +588,18 @@ div {
 ---
 
 <style scoped>
+figure {
+  border: .2em dashed var(--c-grey);
+  text-align: left;
+  font-weight: bold;
+  color: var(--c-grey);
+  padding: .25em .5em;
+}
 .item-list {
   display: flex;
 }
 .item {
-  background-color: #ccc;
-  padding: 5px 10px;
-}
-.item:nth-child(1) {
-  background-color: hsl(0, 80%, 90%);
-}
-.item:nth-child(2) {
-  background-color: hsl(90, 80%, 90%);
-}
-.item:nth-child(3) {
-  background-color: hsl(180, 80%, 90%);
+  padding: .25em .5em;
 }
 </style>
 
@@ -583,10 +607,11 @@ div {
 **`display`** プロパティに **`flex`** を指定すると、
 **直下のブロック要素を横並び**に配置することができる。
 
-<div class="cols c32">
+<div class="cols gap c32">
 <div>
 
 ```html
+<!-- HTML -->
 <div class="item-list">
   <div class="item">Item 1</div>
   <div class="item">Item 2</div>
@@ -595,17 +620,19 @@ div {
 ```
 
 ```css
+/* CSS */
 .item-list {
   display: flex;
 }
 ```
 
 </div>
-<figure>
+<figure class="bare grey-stripes">
+ページ
 <div class="item-list">
-  <div class="item">Item 1</div>
-  <div class="item">Item 2</div>
-  <div class="item">Item 3</div>
+  <div class="item rounded bg-red">Item 1</div>
+  <div class="item rounded bg-green">Item 2</div>
+  <div class="item rounded bg-blue">Item 3</div>
 </div>
 </figure>
 </div>
@@ -613,43 +640,50 @@ div {
 ---
 
 <style scoped>
+figure {
+  border: .2em dashed var(--c-grey);
+  text-align: left;
+  font-weight: bold;
+  color: var(--c-grey);
+  padding: .25em .5em;
+}
 .item-list {
   display: flex;
-  gap: 20px;
+  gap: 1em;
 }
 .item {
-  background-color: #ccc;
-  padding: 5px 10px;
-}
-.item:nth-child(1) {
-  background-color: hsl(0, 80%, 90%);
-}
-.item:nth-child(2) {
-  background-color: hsl(90, 80%, 90%);
-}
-.item:nth-child(3) {
-  background-color: hsl(180, 80%, 90%);
+  padding: .25em .5em;
 }
 </style>
 
-さらに、`gap` プロパティで **各子要素の隙間** を指定することができる。
+さらに、`gap` プロパティで **各子要素間の隙間** を指定することができる。
 
-<div class="cols c32">
+<div class="cols gap c32">
 <div>
 
-```css
-.item-list {
-  display: flex;
-  gap: 20px; /* 各要素の隙間 */
-}
-```
-
-</div>
-<figure>
+```html
+<!-- HTML -->
 <div class="item-list">
   <div class="item">Item 1</div>
   <div class="item">Item 2</div>
   <div class="item">Item 3</div>
+</div>
+```
+
+```css
+.item-list {
+  display: flex;
+  gap: 1em; /* 各要素間に 1 文字分の隙間 */
+}
+```
+
+</div>
+<figure class="bare grey-stripes">
+ページ
+<div class="item-list">
+  <div class="item rounded bg-red">Item 1</div>
+  <div class="item rounded bg-green">Item 2</div>
+  <div class="item rounded bg-blue">Item 3</div>
 </div>
 </figure>
 </div>
