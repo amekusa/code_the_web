@@ -67,6 +67,26 @@ CSS でグリッドレイアウトを実現するには、
 
 ---
 
+<div class="cols c12" style="align-items:center">
+
+<figure>
+
+![](img/sizes.png)
+
+</figure>
+
+モバイル機器、とりわけ*スマートフォン*でウェブサイトを閲覧する場合、*表示できる領域*がデスクトップ環境のそれと比べて**著しく制限**されることになる。
+
+</div>
+
+---
+
+参考サイト:
+- [docolatte](https://amekusa.github.io/docolatte/index.html)
+- [nintendo.com](https://www.nintendo.com/jp/)
+
+
+
 あなたのサイト、*スマホではどう見える*？
 ブラウザでシミュレートしてみよう。
 
