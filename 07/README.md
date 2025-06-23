@@ -8,7 +8,7 @@ theme: custom
 
 <h1 class="logo"><b>CODE</b>_THE_WEB #7</h1>
 <p class="title">コードでウェブをつくろう #7</p>
-<p class="author">&copy; 2024 Satoshi Soma</p>
+<p class="author">&copy; 2025 Satoshi Soma</p>
 
 ---
 
@@ -74,20 +74,21 @@ CSS でグリッドレイアウトを実現するには、
 ![](img/sizes.png)
 
 </figure>
+<div>
 
 モバイル機器、とりわけ*スマートフォン*でウェブサイトを閲覧する場合、*表示できる領域*がデスクトップ環境のそれと比べて**著しく制限**されることになる。
 
+<hr>
+
+スマホ画面サイズ参考:
+https://viewportsizer.com/devices/
+
+</div>
 </div>
 
 ---
 
-参考サイト:
-- [docolatte](https://amekusa.github.io/docolatte/index.html)
-- [nintendo.com](https://www.nintendo.com/jp/)
-
-
-
-あなたのサイト、*スマホではどう見える*？
+## あなたのサイト、*スマホではどう見える*？
 ブラウザでシミュレートしてみよう。
 
 1. 制作中のサイトを Chrome で開く
@@ -95,11 +96,6 @@ CSS でグリッドレイアウトを実現するには、
 3. ![](img/responsive-btn.png) アイコンをクリック
 4. シミュレートしたいデバイスをリストから選ぶ
 リストに無い場合は画面サイズの値を直接入力
-
-<hr>
-
-スマホ画面サイズ参考:
-https://viewportsizer.com/devices/
 
 ---
 
@@ -126,7 +122,7 @@ https://viewportsizer.com/devices/
 
 ---
 
-ビューポートのサイズ決定権をブラウザに一任することには問題がある。
+ビューポートサイズの決定権をブラウザに一任することには問題がある。
 だが、これには解決方法がある。
 実はビューポートのサイズは HTML で指定することができるのだ。
 
