@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* --- 全ページ共通の CSS --- */
+
+/* サイトの基本スタイル */
+body {
+  margin: 0;
+  background-color: lightgreen;
+  color: black;
+}
+
+/* リンクのスタイル */
+a {
+  text-decoration: none;
+}
+
+/* リンクのスタイル（ホバー時） */
+a:hover {
+  text-decoration: underline;
+}
+
+/* ヘッダー */
+.header {
+  background-color: crimson;
+  color: white;
+}
+
+/* ヘッダーの中のリンク */
+.header a {
+  color: white;
+}
+
+.site-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.site-menu {
+  text-align: right;
+}
+.site-menu a {
+  display: inline-block;
+  margin-left: 1.5em;
+}
+
+/* フッター */
+.footer {
+  background-color: lightgreen;
+}
+
+/* メインパート */
+.main {
+  background-color: white;
+}
+
+/* wrap クラス */
+.wrap {
+  max-width: 800px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
